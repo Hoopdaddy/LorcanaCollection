@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lore Vault — Disney Lorcana Collector Reference</title>
+  <meta name="description" content="The definitive archive for Disney Lorcana collectors. Track all cards, officially licensed mats, lore counters, and more. Complete checklists, promo guides, and PDF downloads.">
+  <meta property="og:title" content="The Lore Vault — Disney Lorcana Collector Reference">
+  <meta property="og:description" content="The definitive archive for Disney Lorcana collectors. Track all cards, officially licensed mats, lore counters, and more!">
+  <meta property="og:image" content="https://lorevault.fan/og-image.jpg">
+  <link rel="canonical" href="https://lorevault.fan/">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Page-specific overrides */
+    .hero { min-height: calc(100vh - 64px); display: flex; align-items: center; }
+    .hero-search-panel { position: relative; }
+    .hero-search-panel .search-results-dropdown {
+      position: absolute; top: calc(100% + 8px); left: 0; right: 0;
+      background: white; border: 1px solid var(--border);
+      border-radius: var(--radius-md); box-shadow: var(--shadow-lg);
+      z-index: 200; display: none; max-height: 360px; overflow-y: auto;
+    }
+    .hero-search-panel .search-results-dropdown.open { display: block; }
+    .search-result-group { padding: 10px 0; border-bottom: 1px solid var(--border); }
+    .search-result-group:last-child { border-bottom: none; }
+    .search-result-group-label {
+      font-family: 'Cinzel', serif; font-size: 0.65rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-light); padding: 4px 16px; margin-bottom: 4px;
+    }
+    .search-result-item {
+      padding: 8px 16px; font-size: 0.85rem; cursor: pointer;
+      transition: background 0.15s; display: flex; align-items: center; gap: 10px;
+    }
+    .search-result-item:hover { background: var(--cream); }
+    .search-result-item span { color: var(--text-dark); }
+    .search-result-item small { color: var(--text-light); margin-left: auto; font-size: 0.72rem; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     NAVIGATION
+══════════════════════════════ -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand__name">The Lore Vault</span>
+      <span class="nav-brand__label">A Disney Lorcana Fan Site</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="cards.html">Cards</a></li>
+      <li><a href="mats.html">Mats</a></li>
+      <li><a href="lore-counters.html">Lore Counters</a></li>
+      <li><a href="other.html">Other</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="navSearchToggle" aria-label="Toggle search" aria-expanded="false">🔍</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-search-bar" id="navSearchBar" role="search">
+    <div class="container">
+      <div class="search-bar">
+        <input type="search" placeholder="Search all cards, mats, counters…" aria-label="Site search">
+        <button type="submit" aria-label="Submit search">🔍</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+  <a href="cards.html">Cards</a>
+  <a href="mats.html">Play Mats</a>
+  <a href="lore-counters.html">Lore Counters</a>
+  <a href="other.html">Other Products</a>
+</div>
+
+<!-- ══════════════════════════════
+     HERO
+══════════════════════════════ -->
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Branding -->
+      <div class="hero-brand">
+        <div class="hero-brand__fan-label">A Disney Lorcana Fan Site</div>
+        <h1 class="hero-brand__name font-display" id="hero-title">The Lore Vault</h1>
+        <p class="hero-brand__tagline">
+          The definitive archive for Disney Lorcana collectors. Track all cards,
+          officially licensed mats, lore counters, and more!
+        </p>
+        <!-- Ink Colour Dots -->
+        <div class="hero-ink-dots" role="list" aria-label="Lorcana ink colours">
+          <div class="hero-ink-dot" style="background:var(--ink-amber)"     data-label="Amber"    role="listitem" tabindex="0"></div>
+          <div class="hero-ink-dot" style="background:var(--ink-amethyst)"  data-label="Amethyst" role="listitem" tabindex="0"></div>
+          <div class="hero-ink-dot" style="background:var(--ink-emerald)"   data-label="Emerald"  role="listitem" tabindex="0"></div>
+          <div class="hero-ink-dot" style="background:var(--ink-ruby)"      data-label="Ruby"     role="listitem" tabindex="0"></div>
+          <div class="hero-ink-dot" style="background:var(--ink-sapphire)"  data-label="Sapphire" role="listitem" tabindex="0"></div>
+          <div class="hero-ink-dot" style="background:var(--ink-steel)"     data-label="Steel"    role="listitem" tabindex="0"></div>
+        </div>
+      </div>
+
+      <!-- Search Panel -->
+      <div class="hero-search-panel">
+        <h2>Search The Vault</h2>
+        <div class="hero-search-bar" role="search">
+          <input type="search" id="heroSearch" placeholder="Search cards, mats, counters…" autocomplete="off" aria-label="Search the vault" aria-autocomplete="list" aria-controls="heroSearchDropdown">
+          <button type="submit" aria-label="Search">Search</button>
+        </div>
+        <div class="search-results-dropdown" id="heroSearchDropdown" role="listbox" aria-label="Search suggestions"></div>
+        <div class="suggested-chips" aria-label="Suggested searches">
+          <button class="chip" data-query="Mickey Mouse">Mickey Mouse</button>
+          <button class="chip" data-query="Promo Foil">Promo Foil</button>
+          <button class="chip" data-query="Enchanted">Enchanted</button>
+          <button class="chip" data-query="Set 1">Set 1</button>
+          <button class="chip" data-query="Tournament Mat">Tournament Mat</button>
+          <button class="chip" data-query="Trove">Trove</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CATEGORY CARDS
+══════════════════════════════ -->
+<section class="section section--cream" aria-labelledby="collections-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 id="collections-heading">Explore the Collections</h2>
+        <p>Every officially released Disney Lorcana collectible, catalogued and searchable.</p>
+      </div>
+    </div>
+    <div class="category-cards">
+
+      <a href="cards.html" class="category-card" aria-label="Cards — Browse all 177+ promo cards and 12+ sets">
+        <div class="category-card__stripe" style="background:var(--ink-sapphire)"></div>
+        <div class="category-card__body">
+          <div class="category-card__name">🃏 Cards</div>
+          <p class="category-card__desc">Complete set checklists, promo cards across seven series (P1–P3, C1–C2, D23, DIS), dual-ink variants, and all treatments.</p>
+          <div class="category-card__count">177 promos · 12+ sets · All treatments</div>
+        </div>
+        <div class="category-card__arrow" aria-hidden="true">→</div>
+      </a>
+
+      <a href="mats.html" class="category-card" aria-label="Play Mats — Browse retail and tournament prize mats">
+        <div class="category-card__stripe" style="background:var(--ink-emerald)"></div>
+        <div class="category-card__body">
+          <div class="category-card__name">🎨 Play Mats</div>
+          <p class="category-card__desc">Ravensburger retail mats and tournament prize mats by set. Full artwork descriptions and sourcing data.</p>
+          <div class="category-card__count">Retail &amp; Tournament Prize · By set</div>
+        </div>
+        <div class="category-card__arrow" aria-hidden="true">→</div>
+      </a>
+
+      <a href="lore-counters.html" class="category-card" aria-label="Lore Counters — Browse Trove and League prize counters">
+        <div class="category-card__stripe" style="background:var(--ink-amber)"></div>
+        <div class="category-card__body">
+          <div class="category-card__name">🪙 Lore Counters</div>
+          <p class="category-card__desc">Trove inclusion tokens and Lorcana League prize counters. Acrylic, metal, and cardboard variants tracked by season.</p>
+          <div class="category-card__count">Trove &amp; League prizes · All materials</div>
+        </div>
+        <div class="category-card__arrow" aria-hidden="true">→</div>
+      </a>
+
+      <a href="other.html" class="category-card" aria-label="Other Products — Browse sleeves, deck boxes, troves, gifts, and more">
+        <div class="category-card__stripe" style="background:var(--ink-amethyst)"></div>
+        <div class="category-card__body">
+          <div class="category-card__name">🛍 Other Products</div>
+          <p class="category-card__desc">Official sleeves, deck boxes, Trove sets, gift sets, accessories, apparel, and puzzles — all officially licensed.</p>
+          <div class="category-card__count">Sleeves · Decks · Troves · Apparel · More</div>
+        </div>
+        <div class="category-card__arrow" aria-hidden="true">→</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     UPCOMING DATES
+══════════════════════════════ -->
+<section class="section section--cream-mid" aria-labelledby="events-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 id="events-heading">Upcoming Dates</h2>
+        <p>Pre-releases, set launches, League seasons, and tournaments.</p>
+      </div>
+    </div>
+    <div class="events-strip" id="eventsStrip" role="list" aria-label="Upcoming Lorcana events">
+      <!-- Populated by JS from data/events.json -->
+      <div class="event-card" role="listitem">
+        <div class="event-card__type">Pre-Release</div>
+        <div class="event-card__name">Set 13 Pre-Release Weekend</div>
+        <div class="event-card__date">June 7, 2026</div>
+        <div class="event-card__badge"><span class="badge badge--soon">SOON</span></div>
+      </div>
+      <div class="event-card" role="listitem">
+        <div class="event-card__type">Set Release</div>
+        <div class="event-card__name">Set 13 — Into the Inklands II</div>
+        <div class="event-card__date">June 14, 2026</div>
+        <div class="event-card__badge"><span class="badge badge--soon">SOON</span></div>
+      </div>
+      <div class="event-card" role="listitem">
+        <div class="event-card__type">Lorcana League</div>
+        <div class="event-card__name">Season 8 League Begins</div>
+        <div class="event-card__date">June 14, 2026</div>
+      </div>
+      <div class="event-card" role="listitem">
+        <div class="event-card__type">Tournament</div>
+        <div class="event-card__name">Set 13 Regional Championship</div>
+        <div class="event-card__date">July 12, 2026</div>
+      </div>
+      <div class="event-card" role="listitem">
+        <div class="event-card__type">Convention</div>
+        <div class="event-card__name">D23 2026</div>
+        <div class="event-card__date">August 7–9, 2026 · Anaheim, CA</div>
+      </div>
+      <div class="event-card" role="listitem">
+        <div class="event-card__type">Tournament</div>
+        <div class="event-card__name">World Championship 2026</div>
+        <div class="event-card__date">September 20, 2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     NEWS FEED
+══════════════════════════════ -->
+<section class="section section--cream" aria-labelledby="news-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 id="news-heading">Latest News</h2>
+        <p>Aggregated from official Ravensburger and Lorcana channels.</p>
+      </div>
+      <a href="https://ravensburger.com/lorcana" class="btn btn--secondary" target="_blank" rel="noopener">Official Site ↗</a>
+    </div>
+
+    <div class="news-grid">
+      <!-- Featured -->
+      <a href="#" class="news-card news-card--featured" aria-label="Featured news article">
+        <div class="news-card__image">
+          <div class="news-card__image-placeholder" style="aspect-ratio:16/8">🎴</div>
+        </div>
+        <div class="news-card__body">
+          <div class="news-card__source">Official Lorcana</div>
+          <div class="news-card__title">Set 13 Card Reveals Begin — Meet the New Characters Entering the Inklands</div>
+          <div class="news-card__date">May 22, 2026</div>
+          <div class="news-card__link">Read Article →</div>
+        </div>
+      </a>
+
+      <!-- Side cards -->
+      <div class="news-grid__side">
+        <a href="#" class="news-card" aria-label="News: Season 8 League promos revealed">
+          <div class="news-card__image">
+            <div class="news-card__image-placeholder news-card--small">🏆</div>
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__source">Ravensburger</div>
+            <div class="news-card__title">Season 8 League Prize Cards Revealed</div>
+            <div class="news-card__date">May 19, 2026</div>
+          </div>
+        </a>
+        <a href="#" class="news-card" aria-label="News: D23 2026 exclusive cards announced">
+          <div class="news-card__image">
+            <div class="news-card__image-placeholder news-card--small">✨</div>
+          </div>
+          <div class="news-card__body">
+            <div class="news-card__source">Lorcana HQ</div>
+            <div class="news-card__title">D23 2026 Exclusive Promo Cards Announced</div>
+            <div class="news-card__date">May 15, 2026</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════
+     CHECKLIST NAVIGATION
+══════════════════════════════ -->
+<section class="section section--cream-mid" aria-labelledby="checklists-heading">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <h2 id="checklists-heading">Collector Checklists</h2>
+        <p>View online or download print-ready PDFs — perfect for card shows and game stores.</p>
+      </div>
+    </div>
+    <div class="checklist-panels">
+
+      <div class="checklist-panel">
+        <div class="checklist-panel__icon" style="background:rgba(20,88,168,0.1);color:var(--ink-sapphire)">🃏</div>
+        <div class="checklist-panel__name">Promo Cards</div>
+        <div class="checklist-panel__updated">177 entries · Last updated May 2026</div>
+        <div class="checklist-panel__actions">
+          <a href="cards.html#promos" class="btn btn--secondary">View Online</a>
+          <a href="#" class="btn btn--primary">Download PDF</a>
+        </div>
+      </div>
+
+      <div class="checklist-panel">
+        <div class="checklist-panel__icon" style="background:rgba(11,122,86,0.1);color:var(--ink-emerald)">🎨</div>
+        <div class="checklist-panel__name">Play Mats</div>
+        <div class="checklist-panel__updated">Retail &amp; Prize · Last updated May 2026</div>
+        <div class="checklist-panel__actions">
+          <a href="mats.html" class="btn btn--secondary">View Online</a>
+          <a href="#" class="btn btn--primary">Download PDF</a>
+        </div>
+      </div>
+
+      <div class="checklist-panel">
+        <div class="checklist-panel__icon" style="background:rgba(196,104,10,0.1);color:var(--ink-amber)">🪙</div>
+        <div class="checklist-panel__name">Lore Counters</div>
+        <div class="checklist-panel__updated">Trove &amp; League · Last updated May 2026</div>
+        <div class="checklist-panel__actions">
+          <a href="lore-counters.html" class="btn btn--secondary">View Online</a>
+          <a href="#" class="btn btn--primary">Download PDF</a>
+        </div>
+      </div>
+
+      <div class="checklist-panel">
+        <div class="checklist-panel__icon" style="background:rgba(107,40,184,0.1);color:var(--ink-amethyst)">🛍</div>
+        <div class="checklist-panel__name">Other Products</div>
+        <div class="checklist-panel__updated">All categories · Last updated May 2026</div>
+        <div class="checklist-panel__actions">
+          <a href="other.html" class="btn btn--secondary">View Online</a>
+          <a href="#" class="btn btn--primary">Download PDF</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand__name font-display">The Lore Vault</div>
+        <div class="footer-brand__label">A Disney Lorcana Fan Site</div>
+        <p>The Lore Vault exists to help every Illumineer discover, track, and celebrate the full world of Disney Lorcana collecting — from the rarest tournament promos to the newest set releases. We believe every card, mat, and lore counter tells part of the story.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="cards.html">All Cards</a></li>
+          <li><a href="cards.html#promos">Promo Cards</a></li>
+          <li><a href="cards.html#sets">Pack-Pulled Cards</a></li>
+          <li><a href="mats.html">Play Mats</a></li>
+          <li><a href="lore-counters.html">Lore Counters</a></li>
+          <li><a href="other.html">Other Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Promo Series</h4>
+        <ul>
+          <li><a href="cards.html?series=P1">P1 Series</a></li>
+          <li><a href="cards.html?series=P2">P2 Series</a></li>
+          <li><a href="cards.html?series=P3">P3 Series</a></li>
+          <li><a href="cards.html?series=C1">C1 Series</a></li>
+          <li><a href="cards.html?series=C2">C2 Series</a></li>
+          <li><a href="cards.html?series=D23">D23 Series</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener">Official Lorcana Site</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Ravensburger</a></li>
+          <li><a href="index.html#checklists-heading">Checklists &amp; PDFs</a></li>
+          <li><a href="index.html#events-heading">Upcoming Events</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ink Swatch Row -->
+    <div class="footer-ink-row" aria-label="Lorcana ink colours">
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--amber"></div> Amber</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--amethyst"></div> Amethyst</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--emerald"></div> Emerald</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--ruby"></div> Ruby</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--sapphire"></div> Sapphire</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--steel"></div> Steel</div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-legal">
+        Not affiliated with, endorsed by, or connected to The Walt Disney Company, Ravensburger, or their subsidiaries.<br>
+        Disney Lorcana is a trademark of Disney. All card images and names are © Disney / Ravensburger.<br>
+        © 2026 The Lore Vault Fan Site. For personal, non-commercial use only.
+      </p>
+      <a href="index.html" class="nav-brand" style="text-decoration:none">
+        <span class="nav-brand__name" style="font-size:0.9rem">The Lore Vault</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The Lore Vault",
+  "description": "The definitive archive for Disney Lorcana collectors.",
+  "url": "https://lorevault.fan/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://lorevault.fan/cards.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+</body>
+</html>

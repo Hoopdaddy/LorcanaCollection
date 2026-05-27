@@ -1,0 +1,39 @@
+{
+  "P1": [
+    { "num": "1TFC·EN·1/P1", "name": "Mickey Mouse — Brave Little Tailor", "ink": "Ruby", "treatment": "Foil", "source": "D23 Expo 2022 promotional card [Foil]", "series": "P1" },
+    { "num": "1TFC·EN·2/P1", "name": "Elsa — Spirit of Winter", "ink": "Sapphire", "treatment": "Foil", "source": "Disney Lorcana Launch Event [Foil]", "series": "P1" },
+    { "num": "1TFC·EN·3/P1", "name": "Moana — Of Motunui", "ink": "Amber", "treatment": "Foil", "source": "Set 1 Launch Weekend [Foil]", "series": "P1" },
+    { "num": "1TFC·EN·4/P1", "name": "Simba — Returned King", "ink": "Emerald", "treatment": "Foil", "source": "Get Into the Game Promotion [Foil]", "series": "P1" },
+    { "num": "1TFC·EN·5/P1", "name": "Ariel — Spectacular Singer", "ink": "Amethyst", "treatment": "NonFoil", "source": "Lorcana League Season 1 Prize [NonFoil]", "series": "P1" }
+  ],
+  "P2": [
+    { "num": "2ROF·EN·1/P2", "name": "Beast — Hardheaded", "ink": "Steel", "treatment": "Foil", "source": "Rise of the Floodborn Launch [Foil]", "series": "P2" },
+    { "num": "2ROF·EN·2/P2", "name": "Cinderella — Ballroom Sensation", "ink": "Sapphire", "treatment": "Foil", "source": "Set 2 Pre-Release [Foil]", "series": "P2" },
+    { "num": "2ROF·ZH·24A/P2", "name": "Stitch — Carefree Surfer", "ink": "Emerald", "treatment": "Foil", "source": "China League Promo [Foil]", "series": "P2", "unconfirmed": true, "region": "ZH" },
+    { "num": "2ROF·ZH·24B/P2", "name": "Stitch — Carefree Surfer (Alt Art)", "ink": "Emerald", "treatment": "FullArt", "source": "China League Promo Alt [FullArt]", "series": "P2", "unconfirmed": true, "region": "ZH" }
+  ],
+  "P3": [
+    { "num": "3ITI·EN·1/P3", "name": "Tinker Bell — Giant Fairy", "ink": "Amethyst", "treatment": "Enchanted", "source": "Into the Inklands Launch Event [Enchanted]", "series": "P3" },
+    { "num": "3ITI·EN·2/P3", "name": "Peter Pan — Never Landing", "ink": "Emerald", "treatment": "Foil", "source": "Lorcana League Season 3 [Foil]", "series": "P3" },
+    { "num": "3ITI·EN·3/P3", "name": "Captain Hook — Forceful Duelist", "ink": "Ruby", "treatment": "Glimmer", "source": "Tournament Prize — Regionals [Glimmer]", "series": "P3" }
+  ],
+  "C1": [
+    { "num": "1TFC·EN·1/C1", "name": "Mickey Mouse — True Friend", "ink": "DualInk (SA)", "treatment": "Serialized", "source": "Lorcana Challenge Championship Prize [Serialized]", "series": "C1" },
+    { "num": "1TFC·EN·2/C1", "name": "Elsa — Queen of Arendelle", "ink": "Sapphire", "treatment": "Signature", "source": "World Championship Top 8 [Signature]", "series": "C1" }
+  ],
+  "C2": [
+    { "num": "2ROF·EN·1/C2", "name": "Maleficent — Biding Her Time", "ink": "Amethyst", "treatment": "Foil", "source": "Lorcana Challenge Season 2 [Foil]", "series": "C2" },
+    { "num": "2ROF·EN·2/C2", "name": "Scar — Vicious Cheater", "ink": "Ruby", "treatment": "Foil", "source": "Lorcana Challenge Season 2 Second Place [Foil]", "series": "C2" }
+  ],
+  "D23": [
+    { "num": "D23·EN·1/D23", "name": "Mickey Mouse — Collector's Edition", "ink": "Ruby", "treatment": "Foil", "source": "D23 Expo 2022 Exclusive [Foil]", "series": "D23" },
+    { "num": "D23·EN·2/D23", "name": "Minnie Mouse — Stylish Adventurer", "ink": "Sapphire", "treatment": "Foil", "source": "D23 Expo 2022 Exclusive [Foil]", "series": "D23" },
+    { "num": "D23·EN·09/D23", "name": "???", "ink": "???", "treatment": "???", "source": "D23 — Not yet revealed", "series": "D23", "placeholder": true },
+    { "num": "D23·EN·10/D23", "name": "???", "ink": "???", "treatment": "???", "source": "D23 — Not yet revealed", "series": "D23", "placeholder": true }
+  ],
+  "DIS": [
+    { "num": "DIS·EN·1/DIS", "name": "Mickey Mouse — Disney 100 Edition", "ink": "DualInk (RS)", "treatment": "FullArt", "source": "Disney 100th Anniversary Celebration [FullArt]", "series": "DIS" },
+    { "num": "DIS·EN·2/DIS", "name": "Snow White — Fairest in the Land", "ink": "Sapphire", "treatment": "Foil", "source": "Disney 100 Limited Release [Foil]", "series": "DIS" },
+    { "num": "DIS·EN·3/DIS", "name": "Tinker Bell — Disney 100 Fairy", "ink": "Emerald", "treatment": "Enchanted", "source": "Disney 100 Top Prize [Enchanted]", "series": "DIS" }
+  ]
+}

@@ -1,0 +1,9 @@
+[
+  { "id": "e1",  "type": "Pre-Release",     "name": "Set 13 Pre-Release Weekend",        "date": "2026-06-07", "location": "Local Game Stores" },
+  { "id": "e2",  "type": "Set Release",     "name": "Set 13 — Into the Inklands II",     "date": "2026-06-14", "location": "Worldwide" },
+  { "id": "e3",  "type": "Lorcana League",  "name": "Season 8 League Begins",            "date": "2026-06-14", "location": "Participating Stores" },
+  { "id": "e4",  "type": "Tournament",      "name": "Set 13 Regional Championship",      "date": "2026-07-12", "location": "Chicago, IL" },
+  { "id": "e5",  "type": "Convention",      "name": "D23 2026",                          "date": "2026-08-07", "location": "Anaheim, CA" },
+  { "id": "e6",  "type": "Tournament",      "name": "Lorcana Challenge — Summer Series", "date": "2026-08-15", "location": "Online & Select Locations" },
+  { "id": "e7",  "type": "Tournament",      "name": "World Championship 2026",           "date": "2026-09-20", "location": "TBA" }
+]

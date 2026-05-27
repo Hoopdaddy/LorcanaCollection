@@ -1,0 +1,28 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor directories
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (if a build tool is added later)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Build output (if added later)
+dist/
+.next/
+.astro/
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Logs
+*.log

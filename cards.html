@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cards | The Lore Vault — Disney Lorcana Collector Reference</title>
+  <meta name="description" content="Browse all Disney Lorcana cards — 177 promo cards across P1, P2, P3, C1, C2, D23, and DIS series, plus complete pack-pulled set checklists for Sets 1–12.">
+  <link rel="canonical" href="https://lorevault.fan/cards.html">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .tabs-container { min-height: 60vh; }
+
+    /* Promo filter bar */
+    .promo-filters {
+      display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end;
+      margin-bottom: 24px; padding: 20px;
+      background: white; border: 1px solid var(--border); border-radius: var(--radius-md);
+    }
+    .promo-filters > div { display: flex; flex-direction: column; gap: 6px; }
+    .promo-filters label {
+      font-family: 'Cinzel', serif; font-size: 0.65rem;
+      letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light);
+    }
+    .ink-pip {
+      width: 12px; height: 12px; border-radius: 50%; display: inline-block;
+      border: 1px solid rgba(0,0,0,0.15);
+    }
+
+    /* Sets search row */
+    .sets-search-row {
+      display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;
+    }
+    .sets-search-row .search-bar { flex: 1; min-width: 200px; }
+
+    /* Pack-pulled tab */
+    #tab-sets .accordion:first-child .accordion-header { border-top: none; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">
+      <span class="nav-brand__name">The Lore Vault</span>
+      <span class="nav-brand__label">A Disney Lorcana Fan Site</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="cards.html" class="active">Cards</a></li>
+      <li><a href="mats.html">Mats</a></li>
+      <li><a href="lore-counters.html">Lore Counters</a></li>
+      <li><a href="other.html">Other</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-search-toggle" id="navSearchToggle" aria-label="Toggle search">🔍</button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-search-bar" id="navSearchBar" role="search">
+    <div class="container"><div class="search-bar">
+      <input type="search" placeholder="Search cards…" aria-label="Search cards">
+      <button type="submit" aria-label="Search">🔍</button>
+    </div></div>
+  </div>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <a href="cards.html">Cards</a><a href="mats.html">Play Mats</a>
+  <a href="lore-counters.html">Lore Counters</a><a href="other.html">Other Products</a>
+</div>
+
+<!-- PAGE HEADER -->
+<header class="page-header" id="top">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a> › Cards
+    </nav>
+    <h1>Cards</h1>
+    <p>Complete checklists for all Disney Lorcana cards — promo series and pack-pulled sets.</p>
+    <div class="page-header__actions">
+      <a href="#" class="btn btn--primary">⬇ Full Checklist PDF</a>
+      <a href="#tab-promos" class="btn btn--secondary" id="btnPromosPdf">⬇ Promos PDF</a>
+    </div>
+  </div>
+</header>
+
+<!-- TABS BAR -->
+<div class="tabs-bar" role="tablist" aria-label="Card categories">
+  <button class="tab-btn active" role="tab" data-tab="tab-sets"   aria-selected="true"  aria-controls="tab-sets">Pack-Pulled Cards</button>
+  <button class="tab-btn"        role="tab" data-tab="tab-promos" aria-selected="false" aria-controls="tab-promos" id="promoTabBtn">Promo Cards</button>
+</div>
+
+<main class="tabs-container" id="cardsTabContainer">
+
+<!-- ══════════════════════════
+     TAB: PACK-PULLED
+══════════════════════════ -->
+<div class="tab-panel active section section--cream" id="tab-sets" role="tabpanel" aria-label="Pack-Pulled Cards" data-filterable>
+
+  <div class="container">
+
+    <div class="sets-search-row">
+      <div class="search-bar">
+        <input type="search" class="filter-search" placeholder="Filter cards by name…" aria-label="Filter cards">
+        <button type="submit" aria-label="Filter">🔍</button>
+      </div>
+    </div>
+
+    <!-- Set 12 -->
+    <div class="accordion" data-set="12">
+      <button class="accordion-header open" aria-expanded="true">
+        <div class="accordion-set-badge">S12</div>
+        <h3>Wilds Unknown</h3>
+        <div class="accordion-meta">
+          <span>Set 12</span>
+          <span>Jan 2026</span>
+          <span>204 cards</span>
+        </div>
+        <span class="accordion-chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="accordion-body open">
+        <div class="data-table-wrap">
+          <table class="data-table" aria-label="Set 12 cards">
+            <thead><tr>
+              <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+              <th>Card #</th><th>Card Name</th><th>Ink</th><th>Type</th><th>Rarity</th>
+            </tr></thead>
+            <tbody>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s12-001" aria-label="Mark collected"></td>
+                <td><span class="card-num">12·001</span></td>
+                <td>Simba — Pride Lands Prince</td>
+                <td><span class="flex items-center gap-8"><span class="ink-pip" style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+                <td>Character</td>
+                <td>Common</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s12-002" aria-label="Mark collected"></td>
+                <td><span class="card-num">12·002</span></td>
+                <td>Nala — Fierce Hunter</td>
+                <td><span class="flex items-center gap-8"><span class="ink-pip" style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+                <td>Character</td>
+                <td>Uncommon</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s12-003" aria-label="Mark collected"></td>
+                <td><span class="card-num">12·003</span></td>
+                <td>Rafiki — Mystical Shaman</td>
+                <td><span class="flex items-center gap-8"><span class="ink-pip" style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+                <td>Character</td>
+                <td>Rare</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s12-004" aria-label="Mark collected"></td>
+                <td><span class="card-num">12·004</span></td>
+                <td>Timon — Tunnel Supervisor</td>
+                <td><span class="flex items-center gap-8"><span class="ink-pip" style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
+                <td>Character</td>
+                <td>Common</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s12-204" aria-label="Mark collected"></td>
+                <td><span class="card-num">12·204</span></td>
+                <td>Simba — Returned King</td>
+                <td><span class="flex items-center gap-8"><span class="ink-pip" style="background:var(--ink-ruby);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Ruby</span></td>
+                <td>Character</td>
+                <td>Legendary</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Set 11 -->
+    <div class="accordion" data-set="11">
+      <button class="accordion-header" aria-expanded="false">
+        <div class="accordion-set-badge">S11</div>
+        <h3>Shimmering Skies</h3>
+        <div class="accordion-meta"><span>Set 11</span><span>Aug 2025</span><span>204 cards</span></div>
+        <span class="accordion-chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="data-table-wrap">
+          <table class="data-table" aria-label="Set 11 cards">
+            <thead><tr>
+              <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+              <th>Card #</th><th>Card Name</th><th>Ink</th><th>Type</th><th>Rarity</th>
+            </tr></thead>
+            <tbody>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s11-001" aria-label="Mark collected"></td>
+                <td><span class="card-num">11·001</span></td>
+                <td>Aladdin — Cunning Sorcerer</td>
+                <td><span class="flex items-center gap-8"><span style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+                <td>Character</td><td>Common</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s11-002" aria-label="Mark collected"></td>
+                <td><span class="card-num">11·002</span></td>
+                <td>Jasmine — Spirited Dreamer</td>
+                <td><span class="flex items-center gap-8"><span style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Sapphire</span></td>
+                <td>Character</td><td>Uncommon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Set 1 -->
+    <div class="accordion" data-set="1">
+      <button class="accordion-header" aria-expanded="false">
+        <div class="accordion-set-badge">S1</div>
+        <h3>The First Chapter</h3>
+        <div class="accordion-meta"><span>Set 1</span><span>Aug 2023</span><span>204 cards</span></div>
+        <span class="accordion-chevron" aria-hidden="true">▾</span>
+      </button>
+      <div class="accordion-body">
+        <div class="data-table-wrap">
+          <table class="data-table" aria-label="Set 1 cards">
+            <thead><tr>
+              <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+              <th>Card #</th><th>Card Name</th><th>Ink</th><th>Type</th><th>Rarity</th>
+            </tr></thead>
+            <tbody>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s1-001" aria-label="Mark collected"></td>
+                <td><span class="card-num">1·001</span></td>
+                <td>Mickey Mouse — Brave Little Tailor</td>
+                <td><span class="flex items-center gap-8"><span style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+                <td>Character</td><td>Common</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s1-002" aria-label="Mark collected"></td>
+                <td><span class="card-num">1·002</span></td>
+                <td>Minnie Mouse — Beloved Princess</td>
+                <td><span class="flex items-center gap-8"><span style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+                <td>Character</td><td>Common</td>
+              </tr>
+              <tr class="filterable-row">
+                <td class="checkbox-col"><input type="checkbox" data-id="s1-204" aria-label="Mark collected"></td>
+                <td><span class="card-num">1·204</span></td>
+                <td>Elsa — Spirit of Winter</td>
+                <td><span class="flex items-center gap-8"><span style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Sapphire</span></td>
+                <td>Character</td><td>Legendary</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-muted" style="margin-top:16px;font-family:'DM Sans',sans-serif;font-size:0.82rem;">
+      Showing Sets 1, 11 &amp; 12 as samples. Full data for Sets 2–10 populates identically.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════
+     TAB: PROMO CARDS
+══════════════════════════ -->
+<div class="tab-panel section section--cream" id="tab-promos" role="tabpanel" aria-label="Promo Cards" data-filterable>
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="promo-filters" role="search" aria-label="Filter promo cards">
+      <div>
+        <label>Search</label>
+        <div class="search-bar" style="min-width:220px">
+          <input type="search" class="filter-search" placeholder="Card name, event…" aria-label="Search promos">
+          <button type="submit" aria-label="Search">🔍</button>
+        </div>
+      </div>
+      <div>
+        <label>Treatment</label>
+        <div class="filter-row" style="margin:0">
+          <button class="chip active" data-group="treatment" data-filter-key="treatment" data-filter-val="">All</button>
+          <button class="chip" data-group="treatment"><span class="treatment treatment--foil">Foil</span></button>
+          <button class="chip" data-group="treatment"><span class="treatment treatment--enchanted">Enchanted</span></button>
+          <button class="chip" data-group="treatment"><span class="treatment treatment--fullart">Full Art</span></button>
+          <button class="chip" data-group="treatment"><span class="treatment treatment--glimmer">Glimmer</span></button>
+          <button class="chip" data-group="treatment"><span class="treatment treatment--serialized">Serialized</span></button>
+          <button class="chip" data-group="treatment"><span class="treatment treatment--signature">Signature</span></button>
+        </div>
+      </div>
+      <div>
+        <label>Ink Colour</label>
+        <div class="filter-row" style="margin:0">
+          <button class="chip active" data-group="ink">All Inks</button>
+          <button class="chip" data-group="ink"><span class="ink-pip" style="background:var(--ink-amber);width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px"></span>Amber</button>
+          <button class="chip" data-group="ink"><span class="ink-pip" style="background:var(--ink-amethyst);width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px"></span>Amethyst</button>
+          <button class="chip" data-group="ink"><span class="ink-pip" style="background:var(--ink-emerald);width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px"></span>Emerald</button>
+          <button class="chip" data-group="ink"><span class="ink-pip" style="background:var(--ink-ruby);width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px"></span>Ruby</button>
+          <button class="chip" data-group="ink"><span class="ink-pip" style="background:var(--ink-sapphire);width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px"></span>Sapphire</button>
+          <button class="chip" data-group="ink"><span class="ink-pip" style="background:var(--ink-steel);width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:4px"></span>Steel</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Series Sub-tabs -->
+    <div class="series-tabs" role="tablist" aria-label="Promo series">
+      <button class="chip active" data-series="all" role="tab" aria-selected="true">All (177)</button>
+      <button class="chip" data-series="P1" role="tab">P1 (41)</button>
+      <button class="chip" data-series="P2" role="tab">P2 (43)</button>
+      <button class="chip" data-series="P3" role="tab">P3 (48)</button>
+      <button class="chip" data-series="C1" role="tab">C1 (15)</button>
+      <button class="chip" data-series="C2" role="tab">C2 (10)</button>
+      <button class="chip" data-series="D23" role="tab">D23 (8+)</button>
+      <button class="chip" data-series="DIS" role="tab">DIS (3)</button>
+    </div>
+
+    <!-- P1 Series -->
+    <div class="series-block" data-series="P1">
+      <div class="series-header">
+        <div>
+          <span class="series-header__code">P1</span>
+          <span class="series-header__name"> — Launch &amp; Event Promos</span>
+          <span class="series-header__count"> · 41 cards</span>
+        </div>
+        <a href="#" class="btn btn--secondary" style="font-size:0.68rem;padding:8px 14px">⬇ P1 PDF</a>
+      </div>
+      <div class="data-table-wrap">
+        <table class="data-table" aria-label="P1 promo cards">
+          <thead><tr>
+            <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+            <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
+          </tr></thead>
+          <tbody>
+            <tr class="filterable-row" data-treatment="foil" data-ink="ruby">
+              <td class="checkbox-col"><input type="checkbox" data-id="p1-1" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·1/P1</span></td>
+              <td>Mickey Mouse — Brave Little Tailor</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-ruby);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Ruby</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>D23 Expo 2022 promotional card</td>
+            </tr>
+            <tr class="filterable-row" data-treatment="foil" data-ink="sapphire">
+              <td class="checkbox-col"><input type="checkbox" data-id="p1-2" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·2/P1</span></td>
+              <td>Elsa — Spirit of Winter</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Sapphire</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>Disney Lorcana Launch Event</td>
+            </tr>
+            <tr class="filterable-row" data-treatment="foil" data-ink="amber">
+              <td class="checkbox-col"><input type="checkbox" data-id="p1-3" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·3/P1</span></td>
+              <td>Moana — Of Motunui</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amber</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>Set 1 Launch Weekend</td>
+            </tr>
+            <tr class="filterable-row" data-treatment="foil" data-ink="emerald">
+              <td class="checkbox-col"><input type="checkbox" data-id="p1-4" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·4/P1</span></td>
+              <td>Simba — Returned King</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>Get Into the Game Promotion</td>
+            </tr>
+            <tr class="filterable-row" data-treatment="nonfoil" data-ink="amethyst">
+              <td class="checkbox-col"><input type="checkbox" data-id="p1-5" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·5/P1</span></td>
+              <td>Ariel — Spectacular Singer</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-amethyst);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Amethyst</span></td>
+              <td><span class="treatment treatment--nonfoil">NonFoil</span></td>
+              <td>Lorcana League Season 1 Prize</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- P2 Series -->
+    <div class="series-block" data-series="P2">
+      <div class="series-header">
+        <div>
+          <span class="series-header__code">P2</span>
+          <span class="series-header__name"> — Rise of the Floodborn Promos</span>
+          <span class="series-header__count"> · 43 cards</span>
+        </div>
+        <a href="#" class="btn btn--secondary" style="font-size:0.68rem;padding:8px 14px">⬇ P2 PDF</a>
+      </div>
+      <div class="data-table-wrap">
+        <table class="data-table" aria-label="P2 promo cards">
+          <thead><tr>
+            <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+            <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
+          </tr></thead>
+          <tbody>
+            <tr class="filterable-row" data-treatment="foil" data-ink="steel">
+              <td class="checkbox-col"><input type="checkbox" data-id="p2-1" aria-label="Mark collected"></td>
+              <td><span class="card-num">2ROF·EN·1/P2</span></td>
+              <td>Beast — Hardheaded</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-steel);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Steel</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>Rise of the Floodborn Launch</td>
+            </tr>
+            <tr class="filterable-row unconfirmed" data-treatment="foil" data-ink="emerald">
+              <td class="checkbox-col"><input type="checkbox" data-id="p2-zh24a" aria-label="Mark collected"></td>
+              <td><span class="card-num">2ROF·ZH·24A/P2</span></td>
+              <td>Stitch — Carefree Surfer</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>China League Promo &nbsp;<span class="badge badge--ruby" style="font-size:0.58rem">⚠ Possibly Never Released</span></td>
+            </tr>
+            <tr class="filterable-row unconfirmed" data-treatment="fullart" data-ink="emerald">
+              <td class="checkbox-col"><input type="checkbox" data-id="p2-zh24b" aria-label="Mark collected"></td>
+              <td><span class="card-num">2ROF·ZH·24B/P2</span></td>
+              <td>Stitch — Carefree Surfer (Alt Art)</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
+              <td><span class="treatment treatment--fullart">Full Art</span></td>
+              <td>China League Promo Alt &nbsp;<span class="badge badge--ruby" style="font-size:0.58rem">⚠ Possibly Never Released</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- C1 Series -->
+    <div class="series-block" data-series="C1">
+      <div class="series-header">
+        <div>
+          <span class="series-header__code">C1</span>
+          <span class="series-header__name"> — Lorcana Challenge Championship</span>
+          <span class="series-header__count"> · 15 cards</span>
+        </div>
+        <a href="#" class="btn btn--secondary" style="font-size:0.68rem;padding:8px 14px">⬇ C1 PDF</a>
+      </div>
+      <div class="data-table-wrap">
+        <table class="data-table" aria-label="C1 championship cards">
+          <thead><tr>
+            <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+            <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
+          </tr></thead>
+          <tbody>
+            <tr class="filterable-row" data-treatment="serialized" data-ink="dual">
+              <td class="checkbox-col"><input type="checkbox" data-id="c1-1" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·1/C1</span></td>
+              <td>Mickey Mouse — True Friend</td>
+              <td>
+                <span class="flex items-center gap-8">
+                  <span class="ink-pip-dual">
+                    <span class="ink-dot" style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;"></span>
+                    <span class="ink-dot" style="background:var(--ink-amber);width:12px;height:12px;border-radius:50%;display:inline-block;margin-left:-4px;"></span>
+                  </span>
+                  DualInk (SA)
+                </span>
+              </td>
+              <td><span class="treatment treatment--serialized">Serialized</span></td>
+              <td>Lorcana Challenge Championship Prize</td>
+            </tr>
+            <tr class="filterable-row" data-treatment="signature" data-ink="sapphire">
+              <td class="checkbox-col"><input type="checkbox" data-id="c1-2" aria-label="Mark collected"></td>
+              <td><span class="card-num">1TFC·EN·2/C1</span></td>
+              <td>Elsa — Queen of Arendelle</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Sapphire</span></td>
+              <td><span class="treatment treatment--signature">Signature</span></td>
+              <td>World Championship Top 8</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- D23 Series -->
+    <div class="series-block" data-series="D23">
+      <div class="series-header">
+        <div>
+          <span class="series-header__code">D23</span>
+          <span class="series-header__name"> — D23 Expo Exclusives</span>
+          <span class="series-header__count"> · 8+ cards</span>
+        </div>
+        <a href="#" class="btn btn--secondary" style="font-size:0.68rem;padding:8px 14px">⬇ D23 PDF</a>
+      </div>
+      <div class="data-table-wrap">
+        <table class="data-table" aria-label="D23 exclusive cards">
+          <thead><tr>
+            <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+            <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
+          </tr></thead>
+          <tbody>
+            <tr class="filterable-row" data-treatment="foil" data-ink="ruby">
+              <td class="checkbox-col"><input type="checkbox" data-id="d23-1" aria-label="Mark collected"></td>
+              <td><span class="card-num">D23·EN·1/D23</span></td>
+              <td>Mickey Mouse — Collector's Edition</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-ruby);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Ruby</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
+              <td>D23 Expo 2022 Exclusive</td>
+            </tr>
+            <tr class="filterable-row placeholder">
+              <td class="checkbox-col"><input type="checkbox" data-id="d23-09" disabled aria-label="Not yet revealed"></td>
+              <td><span class="card-num">D23·EN·09/D23</span></td>
+              <td><em class="muted">⏳ Not yet revealed</em></td>
+              <td>—</td>
+              <td>—</td>
+              <td><em class="muted">D23 — Placeholder</em></td>
+            </tr>
+            <tr class="filterable-row placeholder">
+              <td class="checkbox-col"><input type="checkbox" data-id="d23-10" disabled aria-label="Not yet revealed"></td>
+              <td><span class="card-num">D23·EN·10/D23</span></td>
+              <td><em class="muted">⏳ Not yet revealed</em></td>
+              <td>—</td>
+              <td>—</td>
+              <td><em class="muted">D23 — Placeholder</em></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- DIS Series -->
+    <div class="series-block" data-series="DIS">
+      <div class="series-header">
+        <div>
+          <span class="series-header__code">DIS</span>
+          <span class="series-header__name"> — Disney 100th Anniversary</span>
+          <span class="series-header__count"> · 3 cards</span>
+        </div>
+        <a href="#" class="btn btn--secondary" style="font-size:0.68rem;padding:8px 14px">⬇ DIS PDF</a>
+      </div>
+      <div class="data-table-wrap">
+        <table class="data-table" aria-label="DIS Disney 100 cards">
+          <thead><tr>
+            <th class="checkbox-col"><span class="sr-only">Collected</span></th>
+            <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
+          </tr></thead>
+          <tbody>
+            <tr class="filterable-row" data-treatment="fullart" data-ink="dual">
+              <td class="checkbox-col"><input type="checkbox" data-id="dis-1" aria-label="Mark collected"></td>
+              <td><span class="card-num">DIS·EN·1/DIS</span></td>
+              <td>Mickey Mouse — Disney 100 Edition</td>
+              <td>
+                <span class="flex items-center gap-8">
+                  <span class="ink-pip-dual">
+                    <span class="ink-dot" style="background:var(--ink-ruby);width:12px;height:12px;border-radius:50%;display:inline-block;"></span>
+                    <span class="ink-dot" style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;margin-left:-4px;"></span>
+                  </span>
+                  DualInk (RS)
+                </span>
+              </td>
+              <td><span class="treatment treatment--fullart">Full Art</span></td>
+              <td>Disney 100th Anniversary Celebration</td>
+            </tr>
+            <tr class="filterable-row" data-treatment="enchanted" data-ink="emerald">
+              <td class="checkbox-col"><input type="checkbox" data-id="dis-3" aria-label="Mark collected"></td>
+              <td><span class="card-num">DIS·EN·3/DIS</span></td>
+              <td>Tinker Bell — Disney 100 Fairy</td>
+              <td><span class="flex items-center gap-8"><span style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
+              <td><span class="treatment treatment--enchanted">Enchanted</span></td>
+              <td>Disney 100 Top Prize</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div><!-- /tab-promos -->
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-brand__name font-display">The Lore Vault</div>
+        <div class="footer-brand__label">A Disney Lorcana Fan Site</div>
+        <p>The definitive archive for Disney Lorcana collectors.</p>
+      </div>
+      <div class="footer-col"><h4>Collections</h4><ul>
+        <li><a href="cards.html">All Cards</a></li>
+        <li><a href="mats.html">Play Mats</a></li>
+        <li><a href="lore-counters.html">Lore Counters</a></li>
+        <li><a href="other.html">Other Products</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Promo Series</h4><ul>
+        <li><a href="cards.html?series=P1">P1 Series</a></li>
+        <li><a href="cards.html?series=P2">P2 Series</a></li>
+        <li><a href="cards.html?series=D23">D23 Series</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Resources</h4><ul>
+        <li><a href="#">Official Site ↗</a></li>
+        <li><a href="index.html#checklists-heading">Checklists</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-ink-row">
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--amber"></div> Amber</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--amethyst"></div> Amethyst</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--emerald"></div> Emerald</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--ruby"></div> Ruby</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--sapphire"></div> Sapphire</div>
+      <div class="footer-ink-swatch"><div class="ink-dot ink-dot--steel"></div> Steel</div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">Not affiliated with Disney or Ravensburger. Disney Lorcana is a trademark of Disney. © 2026 The Lore Vault Fan Site.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+  // Handle ?series= URL param to auto-open promo tab and series
+  const params = new URLSearchParams(window.location.search);
+  const seriesParam = params.get('series');
+  if (seriesParam) {
+    document.querySelector('[data-tab="tab-promos"]')?.click();
+    setTimeout(() => {
+      const seriesBtn = document.querySelector(`.series-tabs .chip[data-series="${seriesParam}"]`);
+      if (seriesBtn) seriesBtn.click();
+    }, 50);
+  }
+  // Handle #promos hash
+  if (window.location.hash === '#promos') {
+    document.querySelector('[data-tab="tab-promos"]')?.click();
+  }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Disney Lorcana Cards — The Lore Vault",
+  "description": "Complete checklist of all Disney Lorcana cards including 177 promo cards and pack-pulled sets 1–12.",
+  "url": "https://lorevault.fan/cards.html"
+}
+</script>
+</body>
+</html>
