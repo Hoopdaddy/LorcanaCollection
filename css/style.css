@@ -584,7 +584,7 @@ p { font-family: 'Crimson Pro', serif; font-size: 1.05rem; }
    HOME PAGE — HERO
    ========================================= */
 .hero {
-  background: var(--nav-bg); padding: 100px 0 72px;
+  background: var(--nav-bg); padding: 64px 0 56px;
   border-bottom: 2px solid var(--gold);
   position: relative; overflow: hidden;
 }
