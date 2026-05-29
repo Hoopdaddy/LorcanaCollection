@@ -283,13 +283,9 @@
       <div>
         <label>Treatment</label>
         <div class="filter-row" style="margin:0">
-          <button class="chip active" data-group="treatment" data-filter-key="treatment" data-filter-val="">All</button>
-          <button class="chip" data-group="treatment"><span class="treatment treatment--foil">Foil</span></button>
-          <button class="chip" data-group="treatment"><span class="treatment treatment--enchanted">Enchanted</span></button>
-          <button class="chip" data-group="treatment"><span class="treatment treatment--fullart">Full Art</span></button>
-          <button class="chip" data-group="treatment"><span class="treatment treatment--glimmer">Glimmer</span></button>
-          <button class="chip" data-group="treatment"><span class="treatment treatment--serialized">Serialized</span></button>
-          <button class="chip" data-group="treatment"><span class="treatment treatment--signature">Signature</span></button>
+          <button class="chip active" data-group="treatment">All</button>
+          <button class="chip" data-group="treatment" data-filter-key="treatment" data-filter-val="foil"><span class="treatment treatment--foil">Foil</span></button>
+          <button class="chip" data-group="treatment" data-filter-key="treatment" data-filter-val="nonfoil"><span class="treatment treatment--nonfoil">NonFoil</span></button>
         </div>
       </div>
       <div>
@@ -420,12 +416,12 @@
               <td><span class="treatment treatment--foil">Foil</span></td>
               <td>China League Promo &nbsp;<span class="badge badge--ruby" style="font-size:0.58rem">⚠ Possibly Never Released</span></td>
             </tr>
-            <tr class="filterable-row unconfirmed" data-treatment="fullart" data-ink="emerald">
+            <tr class="filterable-row unconfirmed" data-treatment="foil" data-ink="emerald">
               <td class="checkbox-col"><input type="checkbox" data-id="p2-zh24b" aria-label="Mark collected"></td>
               <td><span class="card-num">2ROF·ZH·24B/P2</span></td>
               <td>Stitch — Carefree Surfer (Alt Art)</td>
               <td><span class="flex items-center gap-8"><span style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
-              <td><span class="treatment treatment--fullart">Full Art</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
               <td>China League Promo Alt &nbsp;<span class="badge badge--ruby" style="font-size:0.58rem">⚠ Possibly Never Released</span></td>
             </tr>
           </tbody>
@@ -450,7 +446,7 @@
             <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
           </tr></thead>
           <tbody>
-            <tr class="filterable-row" data-treatment="serialized" data-ink="dual">
+            <tr class="filterable-row" data-treatment="foil" data-ink="dual">
               <td class="checkbox-col"><input type="checkbox" data-id="c1-1" aria-label="Mark collected"></td>
               <td><span class="card-num">1TFC·EN·1/C1</span></td>
               <td>Mickey Mouse — True Friend</td>
@@ -463,15 +459,15 @@
                   DualInk (SA)
                 </span>
               </td>
-              <td><span class="treatment treatment--serialized">Serialized</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
               <td>Lorcana Challenge Championship Prize</td>
             </tr>
-            <tr class="filterable-row" data-treatment="signature" data-ink="sapphire">
+            <tr class="filterable-row" data-treatment="nonfoil" data-ink="sapphire">
               <td class="checkbox-col"><input type="checkbox" data-id="c1-2" aria-label="Mark collected"></td>
               <td><span class="card-num">1TFC·EN·2/C1</span></td>
               <td>Elsa — Queen of Arendelle</td>
               <td><span class="flex items-center gap-8"><span style="background:var(--ink-sapphire);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Sapphire</span></td>
-              <td><span class="treatment treatment--signature">Signature</span></td>
+              <td><span class="treatment treatment--nonfoil">NonFoil</span></td>
               <td>World Championship Top 8</td>
             </tr>
           </tbody>
@@ -542,7 +538,7 @@
             <th>Collector #</th><th>Card Name</th><th>Ink</th><th>Treatment</th><th>Source / Event</th>
           </tr></thead>
           <tbody>
-            <tr class="filterable-row" data-treatment="fullart" data-ink="dual">
+            <tr class="filterable-row" data-treatment="foil" data-ink="dual">
               <td class="checkbox-col"><input type="checkbox" data-id="dis-1" aria-label="Mark collected"></td>
               <td><span class="card-num">DIS·EN·1/DIS</span></td>
               <td>Mickey Mouse — Disney 100 Edition</td>
@@ -555,15 +551,15 @@
                   DualInk (RS)
                 </span>
               </td>
-              <td><span class="treatment treatment--fullart">Full Art</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
               <td>Disney 100th Anniversary Celebration</td>
             </tr>
-            <tr class="filterable-row" data-treatment="enchanted" data-ink="emerald">
+            <tr class="filterable-row" data-treatment="foil" data-ink="emerald">
               <td class="checkbox-col"><input type="checkbox" data-id="dis-3" aria-label="Mark collected"></td>
               <td><span class="card-num">DIS·EN·3/DIS</span></td>
               <td>Tinker Bell — Disney 100 Fairy</td>
               <td><span class="flex items-center gap-8"><span style="background:var(--ink-emerald);width:12px;height:12px;border-radius:50%;display:inline-block;"></span> Emerald</span></td>
-              <td><span class="treatment treatment--enchanted">Enchanted</span></td>
+              <td><span class="treatment treatment--foil">Foil</span></td>
               <td>Disney 100 Top Prize</td>
             </tr>
           </tbody>

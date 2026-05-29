@@ -17,13 +17,8 @@ const INK_COLORS = {
 };
 
 const TREATMENT_CLASSES = {
-  Foil:       'treatment--foil',
-  NonFoil:    'treatment--nonfoil',
-  Enchanted:  'treatment--enchanted',
-  FullArt:    'treatment--fullart',
-  Glimmer:    'treatment--glimmer',
-  Serialized: 'treatment--serialized',
-  Signature:  'treatment--signature',
+  Foil:    'treatment--foil',
+  NonFoil: 'treatment--nonfoil',
 };
 
 /* ── Ink pip helper ── */
