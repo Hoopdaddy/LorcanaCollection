@@ -4,24 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lore Counters | The Lore Vault — Disney Lorcana Collector Reference</title>
-  <meta name="description" content="Browse all Disney Lorcana lore counters — Trove inclusion tokens and Lorcana League prize counters. Acrylic, metal, and cardboard variants by set and season.">
+  <meta name="description" content="Complete checklist of all official Disney Lorcana lore counters — Illumineer's Trove spin-dial wheels (Sets 3–12) and League organized play prize counters (Sets 1–12).">
   <link rel="canonical" href="https://lorevault.fan/lore-counters.html">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Counter cards are square */
-    .counter-card .product-card__body {
-      gap: 6px;
+    .counter-card .product-card__title { font-size: 0.82rem; }
+    .counter-card .product-card__body  { gap: 4px; }
+
+    /* Counter image areas — dark navy so they're visible */
+    .counter-card .product-card__image {
+      background: linear-gradient(135deg, var(--nav-bg) 0%, #252f58 100%);
+      position: relative; overflow: hidden;
     }
-    .counter-card .product-card__title {
-      font-size: 0.82rem;
+    .counter-card .product-card__image::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 40%, rgba(201,168,76,0.1) 0%, transparent 60%);
     }
-    .season-divider {
+    .counter-card .product-card__image-placeholder { color: rgba(201,168,76,0.25); font-size: 1.4rem; }
+
+    .set-divider {
       font-family: 'Cinzel', serif; font-size: 0.75rem;
       letter-spacing: 0.12em; text-transform: uppercase;
       color: var(--text-light); padding: 10px 0 6px;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 16px; margin-top: 8px;
+      margin-bottom: 16px; margin-top: 32px;
+    }
+    .set-divider:first-of-type { margin-top: 0; }
+
+    .callout-box {
+      background: rgba(201,168,76,0.07);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: var(--radius-md);
+      padding: 14px 18px;
+      font-family: 'DM Sans', sans-serif; font-size: 0.82rem;
+      color: var(--text-dark); line-height: 1.55;
+      margin-bottom: 24px;
+    }
+    .callout-box strong { color: var(--nav-bg); }
+
+    .unconfirmed-note {
+      font-family: 'DM Sans', sans-serif; font-size: 0.75rem;
+      color: var(--text-light); font-style: italic;
+      background: rgba(184,24,46,0.05); border-left: 3px solid rgba(184,24,46,0.25);
+      padding: 6px 12px; border-radius: 0 4px 4px 0; margin-bottom: 12px;
+    }
+
+    .badge--gift {
+      background: linear-gradient(135deg, #0b7a56, #1aaa78);
+      color: #fff; border-radius: 4px;
+      font-size: 0.6rem; padding: 2px 6px;
+      font-family: 'Cinzel', serif; letter-spacing: 0.06em; text-transform: uppercase;
     }
   </style>
 </head>
@@ -61,10 +95,10 @@
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › Lore Counters</nav>
     <h1>Lore Counters</h1>
-    <p>Every official Disney Lorcana lore counter — Trove inclusions and League prize tokens.</p>
+    <p>Every official Disney Lorcana lore counter — Illumineer's Trove spin-dial wheels and League organized play prize counters.</p>
     <div class="page-header__actions">
       <a href="#" class="btn btn--primary">⬇ Full Checklist PDF</a>
-      <a href="#league-counters" class="btn btn--secondary">⬇ League Prizes Only</a>
+      <a href="#league-counters" class="btn btn--secondary">League Prizes ↓</a>
     </div>
   </div>
 </header>
@@ -78,110 +112,283 @@
   <div class="container">
 
     <div class="subsection-header">
-      <span class="badge badge--orange">Trove Inclusion</span>
-      <h3 id="trove-heading">Trove Inclusion Counters</h3>
+      <span class="badge badge--orange">Illumineer's Trove</span>
+      <h3 id="trove-heading">Illumineer's Trove Lore Counters</h3>
     </div>
 
-    <!-- Filters -->
+    <div class="callout-box">
+      <strong>Format:</strong> All official Ravensburger lore counters are <strong>cardboard spin-dial wheels</strong> — two concentric discs with a rotating outer ring displaying numbers 0–20. Sets 1 and 2 Trove boxes did not include a lore counter; all sets from Set 3 onward include one.
+    </div>
+
+    <!-- Filter Row -->
     <div class="filter-row mb-16" role="group" aria-label="Filter trove counters">
       <span class="filter-label">Set:</span>
-      <button class="chip active" data-group="set">All Sets</button>
-      <button class="chip" data-group="set">Set 12</button>
-      <button class="chip" data-group="set">Set 11</button>
-      <button class="chip" data-group="set">Set 1</button>
-      <span class="filter-label" style="margin-left:8px">Material:</span>
-      <button class="chip active" data-group="material">All</button>
-      <button class="chip material--acrylic" data-group="material">Acrylic</button>
-      <button class="chip material--metal" data-group="material">Metal</button>
-      <button class="chip material--cardboard" data-group="material">Cardboard</button>
+      <button class="chip active" data-group="set">All</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-3">Set 3</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-4">Set 4</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-5">Set 5</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-6">Set 6</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-7">Set 7</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-8">Set 8</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-9">Set 9</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-10">Set 10</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-11">Set 11</button>
+      <button class="chip" data-group="set" data-filter-key="set" data-filter-val="set-12">Set 12</button>
     </div>
 
-    <!-- Set 12 Counters -->
-    <div class="season-divider">Set 12 — Wilds Unknown Trove</div>
+    <!-- Set 3 -->
+    <div class="set-divider">Set 3 — Into the Inklands · Feb 2024 — First ever Trove lore counter</div>
     <div class="card-grid card-grid--4col">
 
-      <article class="product-card counter-card filterable-row" data-set="set-12" data-material="acrylic" aria-label="Simba acrylic counter">
+      <article class="product-card counter-card filterable-row" data-set="set-3" aria-label="Into the Inklands Trove lore counter">
         <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🪙</div>
+          <div class="product-card__image-placeholder" aria-hidden="true">⚙</div>
           <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S12</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S3</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Simba Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Clear acrylic lore counter featuring Simba artwork from Wilds Unknown.</p>
+          <div class="product-card__title">The Aurelian Gyrosensor</div>
+          <p class="product-card__desc" style="font-size:0.8rem">A Lorcana-original in-universe device with swirling magic art — no Disney character. First lore counter ever included in a Trove box. Bundled with 6 purple-marble d6 dice (gold numbers).</p>
           <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card counter-card filterable-row" data-set="set-12" data-material="acrylic" aria-label="Nala acrylic counter">
-        <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🦁</div>
-          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S12</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">Nala Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Clear acrylic lore counter with Nala silhouette. Included in the Wilds Unknown Trove.</p>
-          <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card counter-card filterable-row" data-set="set-12" data-material="acrylic" aria-label="Timon and Pumbaa acrylic counter">
-        <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🐗</div>
-          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S12</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">Timon &amp; Pumbaa Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Acrylic double-character token. Unique to the Wilds Unknown Trove Set.</p>
-          <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card counter-card filterable-row" data-set="set-12" data-material="metal" aria-label="Wilds Unknown metal coin">
-        <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🥇</div>
-          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S12</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">Rafiki Metal Coin</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Premium metal lore coin featuring Rafiki. Exclusive to the Wilds Unknown Trove Set.</p>
-          <div class="product-card__chips">
-            <span class="chip material--metal" style="font-size:0.65rem;padding:3px 8px">Metal</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
           </div>
         </div>
       </article>
 
     </div>
 
-    <!-- Set 1 Counters -->
-    <div class="season-divider" style="margin-top:32px">Set 1 — The First Chapter Trove</div>
+    <!-- Set 4 -->
+    <div class="set-divider">Set 4 — Ursula's Return · May 2024</div>
     <div class="card-grid card-grid--4col">
 
-      <article class="product-card counter-card filterable-row" data-set="set-1" data-material="acrylic" aria-label="Mickey Mouse acrylic token">
+      <article class="product-card counter-card filterable-row" data-set="set-4" aria-label="Ursula's Return Trove lore counter">
         <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">⭐</div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🌊</div>
           <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S1</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S4</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Mickey Mouse Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">The original Lorcana lore counter. Clear acrylic Mickey Mouse silhouette from the First Chapter Trove.</p>
+          <div class="product-card__title">Ursula's Return — Inklands Motif</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Swirling ink and seaweed motif referencing Ursula's corrupting influence on the Realm of Lorcana. Thematic/environmental art, no single character. Bundled with 6 purple-marble d6 dice.</p>
           <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
           </div>
         </div>
       </article>
 
     </div>
+
+    <!-- Set 5 -->
+    <div class="set-divider">Set 5 — Shimmering Skies · Aug 2024</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-5" aria-label="Shimmering Skies Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">✦</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S5</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Shimmering Skies — Six-Ink Sparkle</div>
+          <p class="product-card__desc" style="font-size:0.8rem">All six ink colours represented as sparkles/lights — three inks on each face of the disc. Light-coloured card with metallic sparkle-style art. Bundled with 6 clear/silver-glitter d6 dice (purple numbers).</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 6 -->
+    <div class="set-divider">Set 6 — Azurite Sea · Nov 2024</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-6" aria-label="Azurite Sea Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🏴‍☠️</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S6</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Stitch – Pirate</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Stitch in pirate costume with extended artwork. Described as "amazing" by reviewers. Bundled with 6 light-blue d6 dice.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 7 -->
+    <div class="set-divider">Set 7 — Archazia's Island · Mar 2025</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-7" aria-label="Archazia's Island Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐕</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S7</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Bolt – Superdog</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Features Bolt from the 2008 Disney film. Includes a special button to update the lore target to 25 when Donald Duck – Flustered Sorcerer is in play. Bundled with 6 pearlescent d6 dice.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–25</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px;background:rgba(201,168,76,0.12);color:#8B6914">25-Lore Button</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 8 -->
+    <div class="set-divider">Set 8 — Reign of Jafar · Jun 2025</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-8" aria-label="Reign of Jafar Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐍</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S8</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Jafar</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Jafar character art from the Reign of Jafar set. Bundled with 6 "hypnotic sandy effect" d6 dice.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 9 -->
+    <div class="set-divider">Set 9 — Fabled · Sep 2025</div>
+    <div class="unconfirmed-note">⚠ Character art not confirmed in available sources — only the foil finish is confirmed.</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-9" aria-label="Fabled Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">✦</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S9</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Fabled — Foil Counter <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">The only Trove lore counter confirmed to have a foil treatment. Character artwork not identified in available sources. Bundled with 6 shimmering/transparent d6 dice.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px;background:rgba(107,40,184,0.1);color:var(--ink-amethyst)">Foil</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 10 -->
+    <div class="set-divider">Set 10 — Whispers in the Well · Nov 2025</div>
+    <div class="unconfirmed-note">⚠ Character art not confirmed. Notable inclusion: 6 glow-in-the-dark d6 dice.</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-10" aria-label="Whispers in the Well Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">👁</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S10</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Whispers in the Well <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">Character art not identified in available sources. Bundled with 6 glow-in-the-dark d6 dice — the most distinctive dice of any Trove set.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 11 -->
+    <div class="set-divider">Set 11 — Winterspell · Feb 2026</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-11" aria-label="Winterspell Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">❄️</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Stitch &amp; Angel — Snowball Fight</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Stitch and Angel throwing snowballs, matching the set's key art. First appearance of Angel in any Lorcana product. Bundled with 6 frosty-swirls d6 dice.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Set 12 -->
+    <div class="set-divider">Set 12 — Wilds Unknown · May 2026</div>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card filterable-row" data-set="set-12" aria-label="Wilds Unknown Trove lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🚀</div>
+          <div class="product-card__badge-tl"><span class="badge badge--orange" style="font-size:0.55rem">Trove</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S12</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Woody &amp; Buzz Lightyear</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Woody and Buzz Lightyear — first Pixar characters on a Trove lore counter. Matching the set's Toy Story theme. Bundled with 6 d6 dice.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Gift Set bonus -->
+    <div class="set-divider" style="margin-top:40px">Gift Set Inclusions — Into the Inklands Gift Set · Feb 2024</div>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--text-light);margin:0 0 16px">
+      The Into the Inklands Gift Set included two character-themed spin-dial counters — distinct from the Trove counter — one per player in the 2-player box.
+    </p>
+    <div class="card-grid card-grid--4col">
+
+      <article class="product-card counter-card" aria-label="Stitch gift set lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎁</div>
+          <div class="product-card__badge-tl"><span class="badge badge--gift" style="font-size:0.55rem">Gift Set</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S3</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Stitch — Green Counter</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Stitch character spin-dial on green background. Included in the Into the Inklands 2-Player Gift Set.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card counter-card" aria-label="Tinker Bell gift set lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎁</div>
+          <div class="product-card__badge-tl"><span class="badge badge--gift" style="font-size:0.55rem">Gift Set</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S3</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Tinker Bell — Blue Counter</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Tinker Bell character spin-dial on blue background. Included in the Into the Inklands 2-Player Gift Set.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
   </div>
 </section>
 
@@ -192,97 +399,255 @@
   <div class="container">
 
     <div class="subsection-header">
-      <span class="badge badge--prize">League Prize</span>
-      <h3 id="league-heading">Lorcana League Prize Counters</h3>
+      <span class="badge badge--prize">League &amp; OP Prize</span>
+      <h3 id="league-heading">League &amp; Organized Play Prize Counters</h3>
+    </div>
+
+    <div class="callout-box">
+      <strong>Sets 1–6:</strong> Counters were awarded to the top-6 point earners at the end of each 12-week League season (one counter per kit, 6 per season).
+      <br><strong>Sets 7+:</strong> The point-based League was replaced by weekly events. Counters became <em>new-player welcome gifts</em> given to anyone playing their first Disney Lorcana store event.
     </div>
 
     <!-- Filters -->
     <div class="filter-row mb-16" role="group" aria-label="Filter league counters">
       <span class="filter-label">Season:</span>
-      <button class="chip active" data-group="season">All Seasons</button>
-      <button class="chip" data-group="season">Season 7</button>
-      <button class="chip" data-group="season">Season 6</button>
-      <button class="chip" data-group="season">Season 1</button>
-      <span class="filter-label" style="margin-left:8px">Material:</span>
-      <button class="chip active" data-group="material2">All</button>
-      <button class="chip material--acrylic" data-group="material2">Acrylic</button>
-      <button class="chip material--metal" data-group="material2">Metal</button>
+      <button class="chip active" data-group="season">All</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s1">Set 1</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s2">Set 2</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s3">Set 3</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s4">Set 4</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s5">Set 5</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s6">Set 6</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s7">Set 7</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s8">Set 8</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s9">Set 9</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s10">Set 10</button>
+      <button class="chip" data-group="season" data-filter-key="season" data-filter-val="s11">Set 11</button>
     </div>
 
-    <!-- Season 7 -->
-    <div class="season-divider">Season 7 — 2025/26</div>
+    <!-- Set 1 -->
+    <div class="set-divider">Season 1 — The First Chapter · Aug 2023</div>
+    <div class="unconfirmed-note">⚠ Character art not confirmed in available sources.</div>
     <div class="card-grid card-grid--4col">
-
-      <article class="product-card counter-card filterable-row" data-season="season-7" data-material="acrylic" aria-label="Season 7 1st place counter">
+      <article class="product-card counter-card filterable-row" data-season="s1" aria-label="Set 1 League lore counter">
         <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🥇</div>
+          <div class="product-card__image-placeholder" aria-hidden="true">⭐</div>
           <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--gold" style="font-size:0.55rem">S7</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S1</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Season 7 — 1st Place Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Gold-tinted acrylic counter for Season 7 League first place. Simba motif.</p>
+          <div class="product-card__title">The First Chapter <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">First ever League lore counter. Awarded to top-6 point earners at season end. Character art not confirmed.</p>
           <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
-            <span class="chip" style="font-size:0.65rem;padding:3px 8px;background:rgba(139,105,20,0.1);color:#8B6914">1st Place</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Top-6 Season</span>
           </div>
         </div>
       </article>
-
-      <article class="product-card counter-card filterable-row" data-season="season-7" data-material="acrylic" aria-label="Season 7 participation counter">
-        <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🎖️</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--gold" style="font-size:0.55rem">S7</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">Season 7 — Participation Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Standard participation acrylic counter for all Season 7 League participants.</p>
-          <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
-            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Participation</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card counter-card filterable-row" data-season="season-7" data-material="metal" aria-label="Season 7 championship metal coin">
-        <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">🏅</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--gold" style="font-size:0.55rem">S7</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">Season 7 — Championship Coin</div>
-          <p class="product-card__desc" style="font-size:0.82rem">Premium metal coin for Season 7 League Championship winners. Nala design.</p>
-          <div class="product-card__chips">
-            <span class="chip material--metal" style="font-size:0.65rem;padding:3px 8px">Metal</span>
-            <span class="chip" style="font-size:0.65rem;padding:3px 8px;background:rgba(139,105,20,0.1);color:#8B6914">Championship</span>
-          </div>
-        </div>
-      </article>
-
     </div>
 
-    <!-- Season 1 -->
-    <div class="season-divider" style="margin-top:32px">Season 1 — 2023</div>
+    <!-- Set 2 -->
+    <div class="set-divider">Season 2 — Rise of the Floodborn · Nov 2023</div>
+    <div class="unconfirmed-note">⚠ Character art not confirmed. Listed with "Dark" colorway in community sources.</div>
     <div class="card-grid card-grid--4col">
-
-      <article class="product-card counter-card filterable-row" data-season="season-1" data-material="acrylic" aria-label="Season 1 participation token">
+      <article class="product-card counter-card filterable-row" data-season="s2" aria-label="Set 2 League lore counter">
         <div class="product-card__image product-card__image--1-1">
-          <div class="product-card__image-placeholder" aria-hidden="true">✨</div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🌑</div>
           <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--gold" style="font-size:0.55rem">S1</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S2</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Season 1 — Participation Token</div>
-          <p class="product-card__desc" style="font-size:0.82rem">The original Lorcana League prize counter. Mickey Mouse design. First season ever distributed.</p>
+          <div class="product-card__title">Rise of the Floodborn — Dark <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">Darker background colorway than the Set 1 counter. Awarded to top-6 point earners at season end. Character art not confirmed.</p>
           <div class="product-card__chips">
-            <span class="chip material--acrylic" style="font-size:0.65rem;padding:3px 8px">Acrylic</span>
-            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Participation</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Top-6 Season</span>
           </div>
         </div>
       </article>
+    </div>
 
+    <!-- Set 3 -->
+    <div class="set-divider">Season 3 — Into the Inklands · Feb 2024</div>
+    <div class="unconfirmed-note">⚠ Character art not confirmed in available sources.</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s3" aria-label="Set 3 League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🗺</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S3</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Into the Inklands <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">Awarded to top-6 point earners at season end. Character art not confirmed. OP kit also included Stitch – Covert Agent and Sheriff of Nottingham character pins.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Top-6 Season</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 4 -->
+    <div class="set-divider">Season 4 — Ursula's Return · May 2024</div>
+    <div class="unconfirmed-note">⚠ Character art not confirmed. Described as "Ursula's Return themed" in community sources.</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s4" aria-label="Set 4 League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐙</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S4</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Ursula's Return <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">Awarded to top-6 point earners at season end. Confirmed as "Ursula's Return themed" — specific character art not identified.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Top-6 Season</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 5 -->
+    <div class="set-divider">Season 5 — Shimmering Skies · Aug 2024</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s5" aria-label="Shimmering Skies League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🍯</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S5</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Winnie the Pooh – Hunny Wizard</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Art by Alice Pisoni. Awarded to top-6 point earners at season end. One of the most beloved League counters in the community.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Top-6 Season</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 6 -->
+    <div class="set-divider">Season 6 — Azurite Sea · Nov 2024</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s6" aria-label="Azurite Sea League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🧚</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S6</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Tinker Bell – Giant Fairy (Enchanted Art)</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Uses the Enchanted alternate art of Tinker Bell – Giant Fairy from Into the Inklands. Last League counter awarded under the points-based system.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Top-6 Season</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 7 -->
+    <div class="set-divider">Season 7 — Archazia's Island · Mar 2025 — New player welcome format begins</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s7" aria-label="Archazia's Island League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🔧</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S7</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Belle – Mechanic Extraordinaire</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Given to any player attending their first Disney Lorcana store event. Includes a 25-lore button for when Donald Duck – Flustered Sorcerer is in play.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–25</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">New Player Welcome</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 8 (Fabled) -->
+    <div class="set-divider">Season 8 — Fabled · Sep 2025</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s8" aria-label="Fabled League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌅</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S8</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Circle of Life</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Art from the Fabled action card "Circle of Life" featuring Lion King / Pride Lands imagery. Distributed as a weekly event / new player welcome prize.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">New Player Welcome</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 9 (Whispers in the Well) -->
+    <div class="set-divider">Season 9 — Whispers in the Well · Nov 2025</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s9" aria-label="Whispers in the Well League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">👁</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S9</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Spooky Sight</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Art from the Whispers in the Well card "Spooky Sight" — Whisper glimmer with supernatural/ghost-like aesthetic and distinctive yellow border. Confirmed on the official Disney Lorcana news page.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">New Player Welcome</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 10 (Winterspell) -->
+    <div class="set-divider">Season 10 — Winterspell · Feb 2026</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s10" aria-label="Winterspell League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🍵</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S10</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Tiana – Warm and Happy</div>
+          <p class="product-card__desc" style="font-size:0.8rem">Princess and the Frog character in a cozy winter setting. Confirmed on official Winterspell organized play sources. Given to any new player attending their first store event.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">New Player Welcome</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Set 11 (Wilds Unknown) -->
+    <div class="set-divider">Season 11 — Wilds Unknown · May 2026</div>
+    <div class="unconfirmed-note">⚠ Character art not yet confirmed for this season's counter.</div>
+    <div class="card-grid card-grid--4col">
+      <article class="product-card counter-card filterable-row" data-season="s11" aria-label="Wilds Unknown League lore counter">
+        <div class="product-card__image product-card__image--1-1">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌿</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize" style="font-size:0.55rem">League</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy" style="font-size:0.55rem">S11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Wilds Unknown <span style="font-size:0.7rem;color:var(--text-light);font-style:italic">(art unconfirmed)</span></div>
+          <p class="product-card__desc" style="font-size:0.8rem">Counter artwork not yet confirmed. Given to any new player at their first Wilds Unknown store event.</p>
+          <div class="product-card__chips">
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">Spin-Dial · 0–20</span>
+            <span class="chip" style="font-size:0.65rem;padding:3px 8px">New Player Welcome</span>
+          </div>
+        </div>
+      </article>
     </div>
 
   </div>
@@ -303,6 +668,7 @@
         <li><a href="cards.html">All Cards</a></li>
         <li><a href="mats.html">Play Mats</a></li>
         <li><a href="lore-counters.html">Lore Counters</a></li>
+        <li><a href="pins.html">OP Pins</a></li>
         <li><a href="other.html">Other Products</a></li>
       </ul></div>
       <div class="footer-col"><h4>Promo Series</h4><ul>
@@ -335,7 +701,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Disney Lorcana Lore Counters — The Lore Vault",
-  "description": "Complete checklist of all Disney Lorcana lore counters — Trove inclusions and League prize tokens.",
+  "description": "Complete checklist of all Disney Lorcana lore counters — Illumineer's Trove spin-dial wheels and League organized play prize counters.",
   "url": "https://lorevault.fan/lore-counters.html"
 }
 </script>
