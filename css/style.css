@@ -768,8 +768,16 @@ p { font-family: 'Crimson Pro', serif; font-size: 1.05rem; }
 .news-card__image-placeholder {
   aspect-ratio: 16/9;
   display: flex; align-items: center; justify-content: center;
-  color: rgba(26,34,64,0.15); font-size: 2.5rem;
-  background: linear-gradient(135deg, var(--cream-mid), var(--cream));
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--nav-bg) 0%, #2a3560 100%);
+  position: relative; overflow: hidden;
+}
+.news-card__image-placeholder::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 60%, rgba(42,181,192,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 30%, rgba(201,168,76,0.10) 0%, transparent 55%);
 }
 .news-card--small .news-card__image-placeholder { aspect-ratio: 16/7; font-size: 1.5rem; }
 .news-card__body { padding: 16px; }
