@@ -1,0 +1,44 @@
+name: Update Latest News
+
+on:
+  # Run every other day at 08:00 UTC
+  schedule:
+    - cron: '0 8 */2 * *'
+  # Also allow a manual run from the GitHub Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Fetch news and update index.html
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python .github/scripts/update_news.py
+
+      - name: Commit and push if anything changed
+        run: |
+          git config user.name  "Lore Vault Bot"
+          git config user.email "bot@lorevault.fan"
+          if ! git diff --quiet index.html; then
+            git add index.html
+            git commit -m "chore: auto-update news [skip ci]"
+            git push
+          else
+            echo "News unchanged — nothing to commit."
+          fi
