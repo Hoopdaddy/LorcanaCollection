@@ -718,16 +718,17 @@ p { font-family: 'Crimson Pro', serif; font-size: 1.05rem; }
    ========================================= */
 .events-strip {
   display: flex; gap: 14px; overflow-x: auto;
-  padding-bottom: 12px; scroll-snap-type: x mandatory;
+  padding: 16px 0 12px; scroll-snap-type: x mandatory;
   -ms-overflow-style: none; scrollbar-width: none;
 }
 .events-strip::-webkit-scrollbar { display: none; }
 .event-card {
   background: white; border: 1px solid var(--border);
   border-radius: var(--radius-md); box-shadow: var(--shadow-sm);
-  padding: 16px 18px; min-width: 200px; flex-shrink: 0;
+  padding: 16px 18px; min-width: 210px; max-width: 210px; flex-shrink: 0;
   scroll-snap-align: start; position: relative;
 }
+.event-card.has-badge { padding-top: 26px; }
 .event-card__type {
   font-family: 'Cinzel', serif; font-size: 0.62rem;
   letter-spacing: 0.1em; text-transform: uppercase;
@@ -736,13 +737,16 @@ p { font-family: 'Crimson Pro', serif; font-size: 1.05rem; }
 .event-card__name {
   font-family: 'Cinzel', serif; font-size: 0.85rem;
   color: var(--text-dark); margin-bottom: 4px; line-height: 1.3;
+  overflow-wrap: break-word; word-break: break-word;
 }
 .event-card__date {
   font-family: 'DM Sans', sans-serif; font-size: 0.78rem;
   color: var(--text-light);
+  overflow-wrap: break-word; word-break: break-word;
 }
 .event-card__badge {
-  position: absolute; top: 10px; right: 10px;
+  position: absolute; top: 0; left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* =========================================
@@ -812,11 +816,6 @@ p { font-family: 'Crimson Pro', serif; font-size: 1.05rem; }
   border-radius: var(--radius-md); padding: 22px 18px;
   box-shadow: var(--shadow-sm);
   display: flex; flex-direction: column; gap: 12px;
-}
-.checklist-panel__icon {
-  width: 40px; height: 40px; border-radius: var(--radius-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem;
 }
 .checklist-panel__name {
   font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 600;
