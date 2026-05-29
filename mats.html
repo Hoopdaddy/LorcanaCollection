@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Play Mats | The Lore Vault — Disney Lorcana Collector Reference</title>
-  <meta name="description" content="Browse all official Disney Lorcana play mats — Ravensburger retail mats and tournament prize mats, organized by set with artwork descriptions and sourcing data.">
+  <meta name="description" content="Browse all official Disney Lorcana play mats — 29 retail mats across Sets 1–12, Set Championship prize mats, convention mats, Lorcana Challenge mats, and World Championship mats.">
   <link rel="canonical" href="https://lorevault.fan/mats.html">
   <meta name="robots" content="index, follow">
   <link rel="stylesheet" href="css/style.css">
@@ -15,9 +15,54 @@
       color: var(--text-light);
       padding: 10px 0 6px;
       border-bottom: 1px solid var(--border);
-      margin-bottom: 16px; margin-top: 8px;
+      margin-bottom: 16px; margin-top: 32px;
     }
+    .mat-set-divider:first-of-type { margin-top: 0; }
     .mat-section + .mat-section { margin-top: 40px; }
+
+    /* Prize sub-section headers */
+    .prize-sub-heading {
+      font-family: 'Cinzel', serif; font-size: 0.9rem;
+      letter-spacing: 0.08em; color: var(--nav-bg);
+      margin: 36px 0 4px; padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+    }
+    .prize-sub-heading:first-of-type { margin-top: 0; }
+
+    /* Exclusive badge */
+    .badge--exclusive {
+      background: linear-gradient(135deg, #4a0070, #9b30d0);
+      color: #fff; border-radius: 4px;
+      font-size: 0.6rem; padding: 2px 6px;
+      font-family: 'Cinzel', serif; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .badge--staff {
+      background: #555; color: #fff; border-radius: 4px;
+      font-size: 0.6rem; padding: 2px 6px;
+      font-family: 'Cinzel', serif; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .badge--champion {
+      background: var(--gold); color: #1a1200; border-radius: 4px;
+      font-size: 0.6rem; padding: 2px 6px;
+      font-family: 'Cinzel', serif; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .badge--runner-up {
+      background: #c0c8d8; color: #1a2240; border-radius: 4px;
+      font-size: 0.6rem; padding: 2px 6px;
+      font-family: 'Cinzel', serif; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .badge--convention {
+      background: #0b7a56; color: #fff; border-radius: 4px;
+      font-size: 0.6rem; padding: 2px 6px;
+      font-family: 'Cinzel', serif; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+
+    /* Foil flag */
+    .foil-flag {
+      display: inline-flex; align-items: center; gap: 4px;
+      font-size: 0.68rem; font-family: 'DM Sans', sans-serif;
+      color: #6B28B8; font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -55,10 +100,10 @@
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> › Play Mats</nav>
     <h1>Play Mats</h1>
-    <p>All officially released Disney Lorcana play mats — retail and tournament prize support.</p>
+    <p>All officially released Disney Lorcana play mats — retail, tournament prize, and exclusive editions.</p>
     <div class="page-header__actions">
-      <a href="#" class="btn btn--primary">⬇ Mats Checklist PDF</a>
-      <a href="#prize-mats" class="btn btn--secondary">⬇ Prize Mats Only</a>
+      <a href="#retail-mats" class="btn btn--primary">Retail Mats (29)</a>
+      <a href="#prize-mats" class="btn btn--secondary">Prize Mats ↓</a>
     </div>
   </div>
 </header>
@@ -74,104 +119,551 @@
     <div class="subsection-header">
       <span class="badge badge--blue">Ravensburger Retail</span>
       <h3 id="retail-heading">Ravensburger Retail Mats</h3>
+      <p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--text-light);margin:6px 0 0">Standard neoprene mats approx. 24″ × 13.5″ (610 × 342 mm). MSRP $19.99 (Sets 1–10); $24.99 from Set 11 onward. Sold through LGS, mass retail, and Ravensburger.com.</p>
     </div>
 
     <!-- Filter Row -->
-    <div class="filter-row mb-16" role="search" aria-label="Filter retail mats" data-filterable>
-      <span class="filter-label">Filter by Set:</span>
-      <button class="chip active" data-group="set">All Sets</button>
+    <div class="filter-row mb-16" role="search" aria-label="Filter retail mats">
+      <span class="filter-label">Set:</span>
+      <button class="chip active" data-group="set">All</button>
       <button class="chip" data-group="set">Set 12</button>
       <button class="chip" data-group="set">Set 11</button>
       <button class="chip" data-group="set">Set 10</button>
+      <button class="chip" data-group="set">Set 9</button>
+      <button class="chip" data-group="set">Set 8</button>
+      <button class="chip" data-group="set">Set 7</button>
+      <button class="chip" data-group="set">Set 6</button>
+      <button class="chip" data-group="set">Set 5</button>
+      <button class="chip" data-group="set">Set 4</button>
+      <button class="chip" data-group="set">Set 3</button>
+      <button class="chip" data-group="set">Set 2</button>
       <button class="chip" data-group="set">Set 1</button>
-      <div class="search-bar" style="max-width:240px;margin-left:auto">
-        <input type="search" class="filter-search" placeholder="Search mats…" aria-label="Search retail mats">
-        <button type="submit" aria-label="Search">🔍</button>
-      </div>
     </div>
 
-    <!-- Set 12 -->
-    <div class="mat-set-divider">Set 12 — Wilds Unknown</div>
-    <div class="card-grid" data-filterable>
+    <!-- ── Set 12 ── -->
+    <div class="mat-set-divider">Set 12 — Wilds Unknown · May 2026</div>
+    <div class="card-grid">
 
-      <article class="product-card filterable-row" data-set="set-12" aria-label="The Pride Lands mat">
+      <article class="product-card" aria-label="Goofy – Super Goof mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🦸</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Goofy – Super Goof</div>
+          <p class="product-card__desc">Goofy as Super Goof in Wilds Unknown art. Standard retail release.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 12</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098872 · May 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Merida – Gifted Archer mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🏹</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Merida – Gifted Archer</div>
+          <p class="product-card__desc">Merida in Wilds Unknown jungle setting. Standard retail release.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 12</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098871 · May 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Rapunzel – Ravensburger Online Exclusive mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌸</div>
+          <div class="product-card__badge-tl"><span class="badge badge--exclusive">Online Exclusive</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Rapunzel – Special Variant</div>
+          <p class="product-card__desc">Art by Alice Pisoni. Ravensburger online store exclusive; limited quantities via EQL lottery. Not available at retail.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 12</span>
+            <span class="badge badge--exclusive" style="font-size:0.62rem">Online Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">May 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Woody & Buzz Disney Springs exclusive mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🚀</div>
+          <div class="product-card__badge-tl"><span class="badge badge--exclusive">Disney Exclusive</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Woody &amp; Buzz Lightyear – Dual Character</div>
+          <p class="product-card__desc">Foil highlights, gold logo, purple stitched edges. Sold exclusively at Disney Springs World of Disney store. Limited per customer.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 12</span>
+            <span class="badge badge--exclusive" style="font-size:0.62rem">Disney Springs</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">May 2026</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 11 ── -->
+    <div class="mat-set-divider">Set 11 — Winterspell · Feb 2026</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Ariel – Sonic Warrior mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎵</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Ariel – Sonic Warrior</div>
+          <p class="product-card__desc">Winterspell retail mat. First set at the new $24.99 price point.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 11</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098852 · Feb 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Dragon Fire mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐉</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Dragon Fire</div>
+          <p class="product-card__desc">Features Maleficent in dragon form. Action card art, Winterspell standard retail.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 11</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098851 · Feb 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Belle – Hidden Archer Ravensburger exclusive mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🏹</div>
+          <div class="product-card__badge-tl"><span class="badge badge--exclusive">Online Exclusive</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Belle – Hidden Archer</div>
+          <p class="product-card__desc">Floodborn Belle alt art. Ravensburger online store exclusive; sold via EQL lottery system March 2026. Not available at retail.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 11</span>
+            <span class="badge badge--exclusive" style="font-size:0.62rem">Online Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Mar 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Mickey & Minnie Disney Parks exclusive mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🏰</div>
+          <div class="product-card__badge-tl"><span class="badge badge--exclusive">Disney Exclusive</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Mickey Mouse &amp; Minnie Mouse – Sweetheart Duo</div>
+          <p class="product-card__desc">Dual character mat with foil accents. Exclusive to Disney Locations (Parks &amp; Disney Stores). Limited per person.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 11</span>
+            <span class="badge badge--exclusive" style="font-size:0.62rem">Disney Parks</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Feb 2026</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 10 ── -->
+    <div class="mat-set-divider">Set 10 — Whispers in the Well · Nov 2025</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Jasmine – Steady Strategist mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">✨</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 10</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Jasmine – Steady Strategist</div>
+          <p class="product-card__desc">Whispers in the Well retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 10</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098803 · Nov 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Mickey Mouse – Brave Little Prince mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">👑</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 10</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Mickey Mouse – Brave Little Prince</div>
+          <p class="product-card__desc">Whispers in the Well retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 10</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098802 · Nov 2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 9 ── -->
+    <div class="mat-set-divider">Set 9 — Fabled · Sep 2025</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Mufasa – Ruler of Pride Rock mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🦁</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 9</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Mufasa – Ruler of Pride Rock</div>
+          <p class="product-card__desc">Fabled retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 9</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098630 · Sep 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Bibbidi Bobbidi Boo mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🪄</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 9</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Cinderella – Bibbidi Bobbidi Boo</div>
+          <p class="product-card__desc">Cinderella transformation scene. Fabled retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 9</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098629 · Sep 2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 8 ── -->
+    <div class="mat-set-divider">Set 8 — Reign of Jafar · May 2025</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Hades – Double Dealer mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🔥</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 8</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Hades – Double Dealer</div>
+          <p class="product-card__desc">Reign of Jafar retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 8</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098541 · May 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Rescue Rangers Away! mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐭</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 8</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Rescue Rangers Away!</div>
+          <p class="product-card__desc">Chip 'n Dale Rescue Rangers action card art. Reign of Jafar retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 8</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098539 · May 2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 7 ── -->
+    <div class="mat-set-divider">Set 7 — Archazia's Island · Mar 2025</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Tigger – In the Crow's Nest mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐯</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 7</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Tigger – In the Crow's Nest</div>
+          <p class="product-card__desc">Art from the Azurite Sea set, sold as the Archazia's Island retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 7</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098538 · Mar 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="We Could Be Immortals mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">⚔️</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 7</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">We Could Be Immortals</div>
+          <p class="product-card__desc">Action card art from Azurite Sea, sold as Archazia's Island accessory.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 7</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098540 · Mar 2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 6 ── -->
+    <div class="mat-set-divider">Set 6 — Azurite Sea · Nov 2024</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Donald Duck – Buccaneer mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">⚓</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 6</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Donald Duck – Buccaneer</div>
+          <p class="product-card__desc">Azurite Sea retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 6</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Nov 2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Elsa – The Fifth Spirit mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">❄️</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 6</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Elsa – The Fifth Spirit</div>
+          <p class="product-card__desc">Azurite Sea retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 6</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Nov 2024</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 5 ── -->
+    <div class="mat-set-divider">Set 5 — Shimmering Skies · Aug 2024</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Look at This Family mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌊</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 5</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Look at This Family</div>
+          <p class="product-card__desc">Action card art scene. Shimmering Skies retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 5</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098408 · Aug 2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Belle – Accomplished Mystic mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">📖</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 5</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Belle – Accomplished Mystic</div>
+          <p class="product-card__desc">Art by Nicholas Kole. Shimmering Skies retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 5</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098409 · Aug 2024</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 4 ── -->
+    <div class="mat-set-divider">Set 4 — Ursula's Return · May 2024</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Rapunzel – Gifted Artist mat">
         <div class="product-card__image product-card__image--16-9">
           <div class="product-card__image-placeholder" aria-hidden="true">🎨</div>
           <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
-        </div>
-        <div class="packaging-strip" aria-label="Packaging thumbnails">
-          <div style="width:48px;height:36px;background:var(--cream-mid);border-radius:3px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:var(--text-light)">📦</div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 4</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">The Pride Lands Play Mat</div>
-          <p class="product-card__desc">Simba, Nala, and Rafiki overlooking the Pride Lands at sunset. Wide-format artwork spanning the full mat surface.</p>
+          <div class="product-card__title">Rapunzel – Gifted Artist</div>
+          <p class="product-card__desc">Art by Aubrey Archer. Ursula's Return retail mat.</p>
           <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Set 12</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(20,88,168,0.08);color:var(--ink-sapphire)">Retail</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Jan 2026</span>
+            <span class="chip" style="font-size:0.7rem">Set 4</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098365 · May 2024</span>
           </div>
         </div>
       </article>
 
-      <article class="product-card filterable-row" data-set="set-12" aria-label="Wilds Unknown — Jungle Canopy mat">
+      <article class="product-card" aria-label="Tinker Bell – Giant Fairy mat">
         <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">🌿</div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🧚</div>
           <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 4</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Jungle Canopy Play Mat</div>
-          <p class="product-card__desc">Timon and Pumbaa exploring an lush inklands jungle. Rich emerald and amber hues throughout.</p>
+          <div class="product-card__title">Tinker Bell – Giant Fairy</div>
+          <p class="product-card__desc">Ursula's Return retail mat.</p>
           <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Set 12</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(20,88,168,0.08);color:var(--ink-sapphire)">Retail</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Jan 2026</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card filterable-row" data-set="set-12" aria-label="The Inklands Wilderness mat">
-        <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">🌟</div>
-          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">The Inklands Wilderness Mat</div>
-          <p class="product-card__desc">Panoramic view of the inklands wilderness featuring characters from Set 12 in stylised ink artwork.</p>
-          <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Set 12</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(20,88,168,0.08);color:var(--ink-sapphire)">Retail</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Jan 2026</span>
+            <span class="chip" style="font-size:0.7rem">Set 4</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">May 2024</span>
           </div>
         </div>
       </article>
 
     </div>
 
-    <!-- Set 1 -->
-    <div class="mat-set-divider" style="margin-top:32px">Set 1 — The First Chapter</div>
+    <!-- ── Set 3 ── -->
+    <div class="mat-set-divider">Set 3 — Into the Inklands · Feb 2024</div>
     <div class="card-grid">
 
-      <article class="product-card filterable-row" data-set="set-1" aria-label="The First Chapter launch mat">
+      <article class="product-card" aria-label="Stitch – Little Rocket mat">
         <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">✨</div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🚀</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 3</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Stitch – Little Rocket</div>
+          <p class="product-card__desc">Into the Inklands retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 3</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098304 · Feb 2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="How Far I'll Go mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌊</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 3</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">How Far I'll Go</div>
+          <p class="product-card__desc">Moana &amp; Te Fiti scene. Song card art. Into the Inklands retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 3</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Feb 2024</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 2 ── -->
+    <div class="mat-set-divider">Set 2 — Rise of the Floodborn · Nov 2023</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Beast – Forbidding Recluse mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌹</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 2</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Beast – Forbidding Recluse</div>
+          <p class="product-card__desc">Rise of the Floodborn retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 2</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098262 · Nov 2023</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Winnie the Pooh – Hunny Wizard mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🍯</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 2</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Winnie the Pooh – Hunny Wizard</div>
+          <p class="product-card__desc">Rise of the Floodborn retail mat.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 2</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098263 · Nov 2023</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── Set 1 ── -->
+    <div class="mat-set-divider">Set 1 — The First Chapter · Aug 2023</div>
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Maleficent – Biding Her Time mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌑</div>
           <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
           <div class="product-card__badge-tr"><span class="badge badge--navy">Set 1</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">The First Chapter Launch Mat</div>
-          <p class="product-card__desc">Mickey Mouse and Elsa in the original Lorcana launch artwork. The first official retail mat released with the game.</p>
+          <div class="product-card__title">Maleficent – Biding Her Time</div>
+          <p class="product-card__desc">One of the two launch-day retail mats. The first officially released Lorcana play mat.</p>
           <div class="product-card__meta">
             <span class="chip" style="font-size:0.7rem">Set 1</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(20,88,168,0.08);color:var(--ink-sapphire)">Retail</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Aug 2023</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098260 · Aug 2023</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Maui – Just In Time mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🪝</div>
+          <div class="product-card__badge-tl"><span class="badge badge--blue">Retail</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 1</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Maui – Just In Time</div>
+          <p class="product-card__desc">One of the two launch-day retail mats released alongside The First Chapter.</p>
+          <div class="product-card__meta">
+            <span class="chip" style="font-size:0.7rem">Set 1</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">SKU 11098261 · Aug 2023</span>
           </div>
         </div>
       </article>
 
     </div>
+
   </div>
 </section>
 
@@ -182,109 +674,369 @@
   <div class="container">
 
     <div class="subsection-header">
-      <span class="badge badge--prize">Tournament Prize</span>
-      <h3 id="prize-heading">Tournament Prize Mats</h3>
+      <span class="badge badge--prize">Tournament &amp; Event</span>
+      <h3 id="prize-heading">Prize &amp; Event Mats</h3>
+      <p style="font-family:'DM Sans',sans-serif;font-size:0.85rem;color:var(--text-light);margin:6px 0 0">Mats earned through organised play, championships, conventions, and special events. Not available for purchase.</p>
     </div>
 
-    <!-- Filter Row -->
-    <div class="filter-row mb-16" role="group" aria-label="Filter tournament prize mats">
-      <span class="filter-label">Event Type:</span>
-      <button class="chip active" data-group="event">All Events</button>
-      <button class="chip" data-group="event">Set Championship</button>
-      <button class="chip" data-group="event">Regional</button>
-      <button class="chip" data-group="event">Lorcana Challenge</button>
-      <button class="chip" data-group="event">World Championship</button>
-      <button class="chip" data-group="event">Infinity Weekend</button>
-    </div>
+    <!-- ─── Set Championship Mats ─── -->
+    <div class="prize-sub-heading">Set Championship Prize Mats</div>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--text-light);margin:0 0 16px">Awarded to champion (1st place) at LGS Set Championships. A runner-up mat was also given for Sets 3–6; champion-only from Set 7 onward (runner-up reinstated for Set 11).</p>
 
     <div class="card-grid">
 
-      <article class="product-card filterable-row" data-event="world-championship" aria-label="World Championship 2023 mat">
+      <article class="product-card" aria-label="Set 3 Championship – Stitch – Rock Star">
         <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">🏆</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize">Tournament Prize</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 1</span></div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🎸</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 3</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">World Championship 2023 Top 8 Mat</div>
-          <p class="product-card__desc">Exclusive prize mat awarded to World Championship 2023 Top 8 finishers. Features Maleficent in tournament art treatment.</p>
+          <div class="product-card__title">Stitch – Rock Star</div>
+          <p class="product-card__desc">Set 3 Set Championship prize mat. Champion version has "CHAMPION" corner text. Runner-up version uses the same art without text. First-ever Lorcana Set Championship (April 19–28, 2024).</p>
           <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Set 1</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(139,105,20,0.1);color:#8B6914">World Championship</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Oct 2023</span>
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion + Runner-Up</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Apr 2024</span>
           </div>
         </div>
       </article>
 
-      <article class="product-card filterable-row" data-event="regional" aria-label="Set 2 Regional Championship mat">
+      <article class="product-card" aria-label="Set 4 Championship – Ursula – Sea Witch Queen">
         <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">🎯</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize">Tournament Prize</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 2</span></div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🐙</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 4</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Set 2 Regional Championship Mat</div>
-          <p class="product-card__desc">Regional prize mat for top finishers in Set 2 Regional Championships. Features Rise of the Floodborn artwork.</p>
+          <div class="product-card__title">Ursula – Sea Witch Queen</div>
+          <p class="product-card__desc">Art by John Loren. Ursula with Flotsam &amp; Jetsam transformed by ink. Set 4 Championship (July 2024). Champion + Runner-Up mats awarded.</p>
           <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Set 2</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(139,105,20,0.1);color:#8B6914">Regional</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Feb 2024</span>
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion + Runner-Up</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Jul 2024</span>
           </div>
         </div>
       </article>
 
-      <article class="product-card filterable-row" data-event="lorcana-challenge" aria-label="Lorcana Challenge mat">
+      <article class="product-card" aria-label="Set 5 Championship – Mirabel Madrigal – Family Gatherer">
         <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">⚔️</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize">Tournament Prize</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Season 1</span></div>
+          <div class="product-card__image-placeholder" aria-hidden="true">🦋</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 5</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Lorcana Challenge Season 1 Mat</div>
-          <p class="product-card__desc">Season 1 Lorcana Challenge prize support mat. Mickey Mouse in challenge-exclusive artwork.</p>
+          <div class="product-card__title">Mirabel Madrigal – Family Gatherer</div>
+          <p class="product-card__desc">Art by Hyuna Lee. Set 5 Championship (October 2024). Champion + Runner-Up mats awarded.</p>
           <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Season 1</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(139,105,20,0.1);color:#8B6914">Lorcana Challenge</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">2024</span>
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion + Runner-Up</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Oct 2024</span>
           </div>
         </div>
       </article>
 
-      <article class="product-card filterable-row" data-event="set-championship" aria-label="Set 12 Championship mat">
+      <article class="product-card" aria-label="Set 6 Championship – Scar – Heartless Hunter">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">😈</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 6</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Scar – Heartless Hunter</div>
+          <p class="product-card__desc">Set 6 Championship (Jan 18 – Feb 9, 2025). Champion + Runner-Up mats. Last set to award a runner-up mat until Set 11.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion + Runner-Up</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Jan–Feb 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Set 7 Championship – Hiro Hamada – Armor Designer">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🤖</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion Only</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 7</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Hiro Hamada – Armor Designer</div>
+          <p class="product-card__desc">Set 7 Championship (May 3–25, 2025). Champion-only mat introduced — no runner-up mat from this point. 2nd–8th place receive promo card only.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">May 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Set 8 Championship – Jafar – High Sultan">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐍</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion Only</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 8</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Jafar – High Sultan of Lorcana</div>
+          <p class="product-card__desc">Set 8 Championship (July–August 2025). Champion-only mat.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Jul–Aug 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Set 9 Championship – Maleficent – Monstrous Dragon">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🐉</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion Only</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 9</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Maleficent – Monstrous Dragon</div>
+          <p class="product-card__desc">Alt art by Cristian Romero. Set 9 Championship (Oct 4–26, 2025). Champion-only mat.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Oct 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Set 10 Championship – Daisy Duck – Paranormal Investigator">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">👻</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion Only</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 10</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Daisy Duck – Paranormal Investigator</div>
+          <p class="product-card__desc">Set 10 Championship (January 2026). Champion-only mat.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Jan 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Set 11 Championship – Tinker Bell – Snowflake Collector">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">❄️</div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Set 11</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Tinker Bell – Snowflake Collector</div>
+          <p class="product-card__desc">Paper-cut snowflake style art by Lady Shalirin. Redesigned border with set name/logo woven in; less prominent CHAMPION text. Set 11 Championship (April 2026). Runner-up mat also confirmed for this set.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion + Runner-Up</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Apr 2026</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Set 12 Championship – Woody – Jungle Guide">
         <div class="product-card__image product-card__image--16-9">
           <div class="product-card__image-placeholder" aria-hidden="true">🌿</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize">Tournament Prize</span></div>
+          <div class="product-card__badge-tl"><span class="badge badge--champion">Champion Only</span></div>
           <div class="product-card__badge-tr"><span class="badge badge--navy">Set 12</span></div>
         </div>
         <div class="product-card__body">
-          <div class="product-card__title">Set 12 Championship Winner Mat</div>
-          <p class="product-card__desc">Exclusive mat for Set 12 Set Championship winners. Features Simba in championship art treatment on dark inklands background.</p>
+          <div class="product-card__title">Woody – Jungle Guide</div>
+          <p class="product-card__desc">Set 12 Championship (June 2026, est.). Champion-only mat.</p>
           <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Set 12</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(139,105,20,0.1);color:#8B6914">Set Championship</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">Mar 2026</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card filterable-row" data-event="infinity-weekend" aria-label="Infinity Weekend mat">
-        <div class="product-card__image product-card__image--16-9">
-          <div class="product-card__image-placeholder" aria-hidden="true">♾️</div>
-          <div class="product-card__badge-tl"><span class="badge badge--prize">Tournament Prize</span></div>
-          <div class="product-card__badge-tr"><span class="badge badge--navy">Infinity</span></div>
-        </div>
-        <div class="product-card__body">
-          <div class="product-card__title">Infinity Weekend Participation Mat</div>
-          <p class="product-card__desc">Participation prize mat for Infinity Weekend events. All six ink colours represented in unified gradient artwork.</p>
-          <div class="product-card__meta">
-            <span class="chip" style="font-size:0.7rem">Infinity</span>
-            <span class="chip" style="font-size:0.7rem;background:rgba(139,105,20,0.1);color:#8B6914">Infinity Weekend</span>
-            <span class="text-muted" style="font-size:0.73rem;font-family:'DM Sans',sans-serif;margin-left:auto">2025</span>
+            <span class="badge badge--champion" style="font-size:0.62rem">Champion Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Jun 2026 (est.)</span>
           </div>
         </div>
       </article>
 
     </div>
+
+    <!-- ─── Convention Prize Mats ─── -->
+    <div class="prize-sub-heading">Convention Prize Mats</div>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--text-light);margin:0 0 16px">Awarded to top finishers at Ravensburger-run convention tournaments (UK Games Expo, Gen Con, etc.). One new mat released per year. Not awarded at Lorcana Challenge events.</p>
+
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Gen Con 2023 Convention Playmat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎲</div>
+          <div class="product-card__badge-tl"><span class="badge badge--convention">Convention Prize</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">2023</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">2023 Convention Playmat</div>
+          <p class="product-card__desc">Six characters — one per ink: Moana (Amber), Mickey Mouse (Amethyst), Cruella De Vil (Emerald), Aladdin (Ruby), Maleficent (Sapphire), Simba (Steel). Top 8 finishers at the Gen Con 2023 Finale. Some copies hand-signed by the Lorcana design team. First-ever Lorcana convention mat.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--convention" style="font-size:0.62rem">Gen Con 2023</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Aug 2023</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="2024 Convention Playmat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎭</div>
+          <div class="product-card__badge-tl"><span class="badge badge--convention">Convention Prize</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">2024</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">2024 Convention Playmat</div>
+          <p class="product-card__desc">Six characters from Sets 2–3: Chernabog, HeiHei, Belle – Hidden Archer, Jim Hawkins, Alice – Growing Girl, Kida – Royal Warrior. Awarded at UK Games Expo (May 2024), Scotland Card Show (Jun 2024), and Gen Con 2024 (Aug 2024).</p>
+          <div class="product-card__meta">
+            <span class="badge badge--convention" style="font-size:0.62rem">Multi-Event 2024</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">May–Aug 2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="2025 Convention Playmat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎪</div>
+          <div class="product-card__badge-tl"><span class="badge badge--convention">Convention Prize</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">2025</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">2025 Convention Playmat</div>
+          <p class="product-card__desc">Six characters from the D23 Collection: Mickey Mouse – Brave Little Tailor, Cinderella – Stouthearted, Ursula – Deceiver, Bruno Madrigal, Vanellope von Schweetz, Oswald the Lucky Rabbit. Awarded at UK Games Expo, Gen Con 2025, and select CCQ side events throughout 2025.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--convention" style="font-size:0.62rem">Multi-Event 2025</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ─── Lorcana Challenge Circuit Mats ─── -->
+    <div class="prize-sub-heading">Lorcana Challenge Circuit Mats</div>
+    <p style="font-family:'DM Sans',sans-serif;font-size:0.82rem;color:var(--text-light);margin:0 0 16px">The Challenge is Lorcana's main competitive circuit. Mats are earned via Prize Wall tickets or awarded to top cut finishers. Season 1: May 2024 – Jun 2025. Season 2: late 2025 onward.</p>
+
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Cinderella – Stouthearted Foil Challenge mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">👠</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize">Challenge S1</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Prize Wall</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Cinderella – Stouthearted <span class="foil-flag">✦ Foil</span></div>
+          <p class="product-card__desc">Challenge-exclusive alt art, foil finish. The most coveted Season 1 Prize Wall item. Cost approx. 90–100 Prize Wall tickets. Available at Atlanta, Chicago, and subsequent Challenge events.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--prize" style="font-size:0.62rem">Prize Wall ~90–100 tickets</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Rapunzel – Gifted with Healing Challenge mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🌸</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize">Challenge S1</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Prize Wall</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Rapunzel – Gifted with Healing <span class="foil-flag">✦ Foil / Standard</span></div>
+          <p class="product-card__desc">Standard (non-foil) version available on the Prize Wall for approx. 14 tickets. Foil version awarded to Top 16 finishers at Challenge regional events alongside NA/EU Championship qualification.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--prize" style="font-size:0.62rem">Prize Wall ~14 tickets / Top 16</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Tinker Bell – Giant Fairy Challenge Prize Wall mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🧚</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize">Challenge S1</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Prize Wall</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Tinker Bell – Giant Fairy</div>
+          <p class="product-card__desc">Ursula's Return card art. Available on the Season 1 Challenge Prize Wall. Also sold commercially as a retail mat (Set 4).</p>
+          <div class="product-card__meta">
+            <span class="badge badge--prize" style="font-size:0.62rem">Season 1 Prize Wall</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">2024</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Baymax – Armored Companion Championship mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🤖</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize">Challenge S1</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">Championship</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Baymax – Armored Companion</div>
+          <p class="product-card__desc">Art by Amber Kommavonsa. Awarded to Top 16 finishers at both the NA Championship (Jan 10–12, 2025, Disneyland Hotel Anaheim) and EU Championship (Dec 7–8, 2024, Disneyland Paris). Paired with 4 Azurite Sea booster boxes and foil promo cards.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--prize" style="font-size:0.62rem">NA &amp; EU Championship Top 16</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Dec 2024 / Jan 2025</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" aria-label="Simba – Pride Protector Season 2 Challenge mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🦁</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize">Challenge S2</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">CCQ Top 8</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Simba – Pride Protector <span class="foil-flag">✦ Foil</span></div>
+          <p class="product-card__desc">Challenge promo art, foil finish. Awarded to Top 8 finishers at Season 2 Challenge Championship Qualifier (CCQ) events. Also awarded alongside the 2025 Convention Playmat at certain placements.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--prize" style="font-size:0.62rem">Season 2 CCQ Top 8</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">2025–2026</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ─── World Championship Mat ─── -->
+    <div class="prize-sub-heading">World Championship</div>
+
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="World Championship 2025 – A Whole New World mat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🏆</div>
+          <div class="product-card__badge-tl"><span class="badge badge--prize">World Championship</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">2025</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">A Whole New World</div>
+          <p class="product-card__desc">Aladdin-themed panoramic art. All 28 competing players received this mat as a participant prize. World Championship 2025, June 27–29, Disney's Yacht Club Convention Center, Walt Disney World, Orlando. Winner: Dinh Khang Pham. Paired with matching sleeves and foil promo card.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--prize" style="font-size:0.62rem">All 28 Competitors</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Jun 2025</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ─── Staff / Internal ─── -->
+    <div class="prize-sub-heading">Staff &amp; Internal — Not Player-Obtainable</div>
+
+    <div class="card-grid">
+
+      <article class="product-card" aria-label="Team Lorcana Fall 2024 Summit Playmat">
+        <div class="product-card__image product-card__image--16-9">
+          <div class="product-card__image-placeholder" aria-hidden="true">🎖️</div>
+          <div class="product-card__badge-tl"><span class="badge badge--staff">Staff Only</span></div>
+          <div class="product-card__badge-tr"><span class="badge badge--navy">2024</span></div>
+        </div>
+        <div class="product-card__body">
+          <div class="product-card__title">Team Lorcana Fall 2024 Summit</div>
+          <p class="product-card__desc">Distributed internally to Ravensburger/Lorcana team members at the Fall 2024 international summit. Six-character D23 art: Mickey, Cinderella, Ursula, Bruno Madrigal, Vanellope von Schweetz, Oswald. Same art used later for the 2025 Convention Playmat. Not obtainable by players or collectors.</p>
+          <div class="product-card__meta">
+            <span class="badge badge--staff" style="font-size:0.62rem">Internal Only</span>
+            <span class="text-muted" style="font-size:0.72rem;margin-left:auto">Fall 2024</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
   </div>
 </section>
 
@@ -335,7 +1087,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "name": "Disney Lorcana Play Mats — The Lore Vault",
-  "description": "Complete checklist of all official Disney Lorcana play mats, including Ravensburger retail and tournament prize mats.",
+  "description": "Complete checklist of all official Disney Lorcana play mats — 29 retail mats across Sets 1–12 plus tournament, convention, challenge circuit, and world championship prize mats.",
   "url": "https://lorevault.fan/mats.html"
 }
 </script>
